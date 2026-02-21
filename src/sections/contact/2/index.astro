@@ -1,0 +1,147 @@
+<!--
+  CONTACT VARIANT 2 — Tarjetas de contacto
+  ===========================================
+  Estilo: Grid de tarjetas con diferentes metodos de contacto, sin formulario.
+
+  ELEMENTOS A SUSTITUIR:
+  ┌──────────────────────────────────────────────────────────────┐
+  │ .eyebrow         → Texto corto de categoria/etiqueta         │
+  │ h2               → Titulo principal de la seccion             │
+  │ .intro           → Parrafo descriptivo de apoyo              │
+  │ .card .icon      → Emoji o icono del metodo de contacto (x4) │
+  │ .card h3         → Titulo del metodo de contacto (x4)        │
+  │ .card p          → Descripcion del metodo (x4)               │
+  │ .card a          → Texto + href del enlace de accion (x4)    │
+  └──────────────────────────────────────────────────────────────┘
+-->
+
+<section class="contact-two">
+  <div class="header">
+    <!-- EYEBROW: Etiqueta superior corta -->
+    <p class="eyebrow">Lorem Ipsum</p>
+    <!-- TITULO: Headline principal -->
+    <h2>Quis nostrud exercitation ullamco laboris nisi</h2>
+    <!-- INTRO: Parrafo de apoyo -->
+    <p class="intro">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore.</p>
+  </div>
+
+  <!-- GRID DE TARJETAS: Cada .card es un metodo de contacto -->
+  <div class="grid">
+    <div class="card">
+      <span class="icon">&#9993;</span>
+      <h3>Lorem Ipsum</h3>
+      <p>Consectetur adipiscing elit sed do eiusmod tempor.</p>
+      <a href="#">lorem@ipsum.com</a>
+    </div>
+
+    <div class="card">
+      <span class="icon">&#9742;</span>
+      <h3>Dolor Sit Amet</h3>
+      <p>Ut enim ad minim veniam quis nostrud exercitation.</p>
+      <a href="#">+1 (234) 567-890</a>
+    </div>
+
+    <div class="card">
+      <span class="icon">&#9873;</span>
+      <h3>Adipiscing Elit</h3>
+      <p>Duis aute irure dolor in reprehenderit in voluptate.</p>
+      <a href="#">Lorem 123, Ipsum 456</a>
+    </div>
+
+    <div class="card">
+      <span class="icon">&#9883;</span>
+      <h3>Sed Eiusmod</h3>
+      <p>Excepteur sint occaecat cupidatat non proident sunt.</p>
+      <a href="#">@lorem_ipsum</a>
+    </div>
+  </div>
+</section>
+
+<style>
+  .contact-two {
+    padding: clamp(3rem, 6vw, 5rem);
+    background: linear-gradient(180deg, #0a0a0f 0%, #1a0e2e 100%);
+    color: #e2e8f0;
+  }
+
+  .header {
+    max-width: 600px;
+    margin-bottom: 2.5rem;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .eyebrow {
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    font-size: 0.78rem;
+    font-weight: 700;
+    color: #c084fc;
+  }
+
+  h2 {
+    margin: 0.4rem 0;
+    font-size: clamp(1.8rem, 4vw, 2.8rem);
+    line-height: 1.1;
+    color: #f1f5f9;
+  }
+
+  .intro {
+    margin: 0;
+    color: #94a3b8;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1rem;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+
+  .card {
+    background: rgba(30, 17, 69, 0.4);
+    border: 1px solid rgba(192, 132, 252, 0.15);
+    border-radius: 18px;
+    padding: 1.5rem;
+    text-align: center;
+    transition: transform 0.2s ease, border-color 0.2s ease;
+  }
+
+  .card:hover {
+    transform: translateY(-3px);
+    border-color: rgba(192, 132, 252, 0.4);
+  }
+
+  .icon {
+    display: block;
+    font-size: 2rem;
+    margin-bottom: 0.8rem;
+  }
+
+  .card h3 {
+    margin: 0 0 0.4rem;
+    font-size: 1.1rem;
+    color: #e9d5ff;
+  }
+
+  .card p {
+    margin: 0 0 0.8rem;
+    font-size: 0.9rem;
+    color: #94a3b8;
+    line-height: 1.5;
+  }
+
+  .card a {
+    text-decoration: none;
+    color: #c084fc;
+    font-weight: 700;
+    font-size: 0.9rem;
+  }
+
+  .card a:hover {
+    text-decoration: underline;
+  }
+</style>

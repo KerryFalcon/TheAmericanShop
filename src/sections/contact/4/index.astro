@@ -1,0 +1,215 @@
+<!--
+  CONTACT VARIANT 4 — FAQ + formulario compacto
+  ================================================
+  Estilo: Seccion con preguntas frecuentes a la izquierda y formulario compacto a la derecha.
+
+  ELEMENTOS A SUSTITUIR:
+  ┌──────────────────────────────────────────────────────────────┐
+  │ .eyebrow         → Texto corto de categoria/etiqueta         │
+  │ h2               → Titulo principal de la seccion             │
+  │ .faq details     → Pregunta frecuente (summary + parrafo)(x4)│
+  │ form labels      → Etiquetas de cada campo del formulario    │
+  │ form button      → Texto del boton de envio                  │
+  │ form action      → URL destino del formulario                │
+  └──────────────────────────────────────────────────────────────┘
+-->
+
+<section class="contact-four">
+  <div class="header">
+    <!-- EYEBROW: Etiqueta superior corta -->
+    <p class="eyebrow">Lorem Ipsum</p>
+    <!-- TITULO: Headline principal -->
+    <h2>Temporibus autem quibusdam et aut officiis debitis</h2>
+  </div>
+
+  <div class="columns">
+    <!-- FAQ: Preguntas frecuentes con <details> -->
+    <div class="faq">
+      <details open>
+        <summary>Lorem ipsum dolor sit amet consectetur?</summary>
+        <p>Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam quis nostrud exercitation.</p>
+      </details>
+      <details>
+        <summary>Ut enim ad minim veniam quis nostrud?</summary>
+        <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+      </details>
+      <details>
+        <summary>Excepteur sint occaecat cupidatat non proident?</summary>
+        <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit sed quia consequuntur magni.</p>
+      </details>
+      <details>
+        <summary>Sed ut perspiciatis unde omnis iste natus?</summary>
+        <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum.</p>
+      </details>
+    </div>
+
+    <!-- FORMULARIO: Compacto, cambiar action y campos -->
+    <form class="form" action="#" method="POST">
+      <div class="field">
+        <label for="c4-name">Lorem Ipsum</label>
+        <input type="text" id="c4-name" name="name" placeholder="Dolor sit amet" />
+      </div>
+      <div class="field">
+        <label for="c4-email">Consectetur</label>
+        <input type="email" id="c4-email" name="email" placeholder="lorem@ipsum.com" />
+      </div>
+      <div class="field">
+        <label for="c4-subject">Adipiscing</label>
+        <select id="c4-subject" name="subject">
+          <option value="">-- Lorem Ipsum --</option>
+          <option value="a">Dolor Sit</option>
+          <option value="b">Amet Consectetur</option>
+          <option value="c">Adipiscing Elit</option>
+        </select>
+      </div>
+      <div class="field">
+        <label for="c4-msg">Sed Eiusmod</label>
+        <textarea id="c4-msg" name="message" rows="3" placeholder="Tempor incididunt..."></textarea>
+      </div>
+      <!-- BOTON: Texto del CTA de envio -->
+      <button type="submit">Lorem Ipsum</button>
+    </form>
+  </div>
+</section>
+
+<style>
+  .contact-four {
+    padding: clamp(3rem, 6vw, 5rem);
+    background: linear-gradient(180deg, #0c0c1d 0%, #111827 100%);
+    color: #e2e8f0;
+  }
+
+  .header {
+    max-width: 600px;
+    margin-bottom: 2.5rem;
+  }
+
+  .eyebrow {
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    font-size: 0.78rem;
+    font-weight: 700;
+    color: #fbbf24;
+  }
+
+  h2 {
+    margin: 0.4rem 0 0;
+    font-size: clamp(1.8rem, 4vw, 2.8rem);
+    line-height: 1.1;
+    color: #f1f5f9;
+  }
+
+  .columns {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2.5rem;
+    align-items: start;
+  }
+
+  .faq {
+    display: grid;
+    gap: 0.6rem;
+  }
+
+  details {
+    background: rgba(15, 23, 42, 0.5);
+    border: 1px solid rgba(251, 191, 36, 0.12);
+    border-radius: 14px;
+    padding: 1rem 1.2rem;
+    transition: border-color 0.2s;
+  }
+
+  details[open] {
+    border-color: rgba(251, 191, 36, 0.35);
+  }
+
+  summary {
+    cursor: pointer;
+    font-weight: 700;
+    color: #fef3c7;
+    font-size: 0.95rem;
+    list-style: none;
+  }
+
+  summary::-webkit-details-marker {
+    display: none;
+  }
+
+  details p {
+    margin: 0.6rem 0 0;
+    color: #94a3b8;
+    font-size: 0.9rem;
+    line-height: 1.6;
+  }
+
+  .form {
+    display: grid;
+    gap: 0.8rem;
+    background: rgba(15, 23, 42, 0.6);
+    border: 1px solid rgba(251, 191, 36, 0.12);
+    border-radius: 18px;
+    padding: 1.5rem;
+  }
+
+  .field {
+    display: grid;
+    gap: 0.25rem;
+  }
+
+  label {
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: #cbd5e1;
+  }
+
+  input,
+  textarea,
+  select {
+    background: rgba(2, 6, 23, 0.6);
+    border: 1px solid rgba(251, 191, 36, 0.15);
+    border-radius: 10px;
+    padding: 0.6rem 0.8rem;
+    color: #f1f5f9;
+    font-family: inherit;
+    font-size: 0.9rem;
+    outline: none;
+    transition: border-color 0.2s;
+  }
+
+  input:focus,
+  textarea:focus,
+  select:focus {
+    border-color: #fbbf24;
+  }
+
+  select {
+    cursor: pointer;
+  }
+
+  textarea {
+    resize: vertical;
+  }
+
+  button {
+    background: #fbbf24;
+    color: #422006;
+    border: none;
+    border-radius: 999px;
+    padding: 0.75rem 1.2rem;
+    font-weight: 700;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: transform 0.2s;
+  }
+
+  button:hover {
+    transform: translateY(-2px);
+  }
+
+  @media (max-width: 768px) {
+    .columns {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

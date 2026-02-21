@@ -1,0 +1,107 @@
+<!--
+  HERO VARIANT 6 — Grid de botones / Command Center
+  ====================================================
+  Estilo: Fondo oscuro con grid de multiples CTAs de colores alternados.
+
+  ELEMENTOS A SUSTITUIR:
+  ┌──────────────────────────────────────────────────────────────┐
+  │ .kicker          → Texto corto de categoria/etiqueta         │
+  │ h1               → Titulo principal del hero                 │
+  │ header p         → Parrafo descriptivo de apoyo              │
+  │ .button-grid a   → Texto + href de cada boton (x12)          │
+  │                    Agregar o quitar botones segun necesidad   │
+  └──────────────────────────────────────────────────────────────┘
+-->
+
+<section class="hero-six">
+  <header>
+    <!-- KICKER: Etiqueta superior corta -->
+    <p class="kicker">Lorem Ipsum</p>
+
+    <!-- TITULO: Headline principal del hero -->
+    <h1>Duis aute irure dolor in reprehenderit in voluptate velit</h1>
+
+    <!-- DESCRIPCION: Parrafo de apoyo -->
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore
+      et dolore magna aliqua. Ut enim ad minim veniam.
+    </p>
+  </header>
+
+  <!-- GRID DE BOTONES: Cada <a> es un CTA independiente -->
+  <div class="button-grid">
+    <a href="#">Lorem Ipsum</a>
+    <a href="#">Dolor Sit</a>
+    <a href="#">Amet Consectetur</a>
+    <a href="#">Adipiscing Elit</a>
+    <a href="#">Sed Eiusmod</a>
+    <a href="#">Tempor Incididunt</a>
+    <a href="#">Labore Dolore</a>
+    <a href="#">Magna Aliqua</a>
+    <a href="#">Ut Enim</a>
+    <a href="#">Minim Veniam</a>
+    <a href="#">Quis Nostrud</a>
+    <a href="#">Exercitation</a>
+  </div>
+</section>
+
+<style>
+  .hero-six {
+    padding: clamp(2rem, 5vw, 4rem);
+    background: linear-gradient(130deg, #111827 0%, #1f2937 45%, #0f172a 100%);
+    color: #f9fafb;
+  }
+
+  .kicker {
+    margin: 0;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: #a5f3fc;
+    font-weight: 700;
+  }
+
+  h1 {
+    margin: 0.5rem 0;
+    font-size: clamp(1.9rem, 4.5vw, 3.4rem);
+    line-height: 1.08;
+  }
+
+  header p {
+    max-width: 64ch;
+    color: #cbd5e1;
+  }
+
+  .button-grid {
+    margin-top: 1.5rem;
+    display: grid;
+    gap: 0.7rem;
+    grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+  }
+
+  .button-grid a {
+    text-decoration: none;
+    border-radius: 12px;
+    padding: 0.78rem 0.95rem;
+    color: #022c22;
+    background: linear-gradient(135deg, #99f6e4, #5eead4);
+    font-weight: 700;
+    border: 1px solid rgba(6, 95, 70, 0.28);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+
+  .button-grid a:nth-child(3n) {
+    background: linear-gradient(135deg, #bfdbfe, #93c5fd);
+    color: #172554;
+  }
+
+  .button-grid a:nth-child(4n) {
+    background: linear-gradient(135deg, #fde68a, #fdba74);
+    color: #78350f;
+  }
+
+  .button-grid a:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 24px rgba(15, 23, 42, 0.35);
+  }
+</style>

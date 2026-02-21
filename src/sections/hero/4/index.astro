@@ -1,0 +1,151 @@
+<!--
+  HERO VARIANT 4 — Fondo fotografico + logo animado
+  ===================================================
+  Estilo: Imagen de fondo con overlay oscuro, orbe/logo animado giratorio.
+
+  ELEMENTOS A SUSTITUIR:
+  ┌──────────────────────────────────────────────────────────────┐
+  │ .logo-orb span   → Letra o icono del logo animado           │
+  │ .tag             → Texto corto de categoria/etiqueta         │
+  │ h1               → Titulo principal del hero                 │
+  │ .content > p     → Parrafo descriptivo de apoyo              │
+  │ .actions a       → Texto + href de cada CTA (x2)             │
+  │ .hero-four       → Cambiar background-image por tu imagen    │
+  │ .overlay         → Decorativo, ajustar opacidad si necesario │
+  │ .logo-orb        → Decorativo animado, cambiar letra/colores │
+  └──────────────────────────────────────────────────────────────┘
+-->
+
+<section class="hero-four">
+  <div class="overlay"></div>
+
+  <div class="content">
+    <!-- LOGO ORB: Orbe animado con letra/icono central -->
+    <div class="logo-orb" aria-hidden="true">
+      <!-- LOGO LETRA: Cambiar por inicial de marca -->
+      <span>L</span>
+      <i></i>
+      <i></i>
+    </div>
+
+    <!-- TAG: Etiqueta superior corta -->
+    <p class="tag">Lorem Ipsum</p>
+
+    <!-- TITULO: Headline principal del hero -->
+    <h1>Ut enim ad minim veniam quis nostrud exercitation ullamco</h1>
+
+    <!-- DESCRIPCION: Parrafo de apoyo -->
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore
+      et dolore magna aliqua. Duis aute irure dolor in reprehenderit.
+    </p>
+
+    <div class="actions">
+      <!-- CTA 1: Boton primario -->
+      <a href="#">Lorem Ipsum</a>
+      <!-- CTA 2: Boton secundario -->
+      <a href="#">Dolor Sit</a>
+    </div>
+  </div>
+</section>
+
+<style>
+  .hero-four {
+    position: relative;
+    overflow: hidden;
+    padding: clamp(2.5rem, 6vw, 5rem);
+    min-height: 440px;
+    /* IMAGEN DE FONDO: Sustituir URL por imagen propia */
+    background-image: url('https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1500&q=80');
+    background-size: cover;
+    background-position: center;
+    isolation: isolate;
+  }
+
+  .overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(100deg, rgba(2, 6, 23, 0.85), rgba(15, 23, 42, 0.52));
+    z-index: -1;
+  }
+
+  .content {
+    max-width: 760px;
+    color: #f8fafc;
+  }
+
+  .logo-orb {
+    width: 94px;
+    height: 94px;
+    border-radius: 50%;
+    border: 2px solid rgba(125, 211, 252, 0.7);
+    display: grid;
+    place-content: center;
+    margin-bottom: 1rem;
+    position: relative;
+    animation: spin 9s linear infinite;
+    background: radial-gradient(circle at 40% 35%, rgba(56, 189, 248, 0.4), rgba(15, 23, 42, 0.9));
+  }
+
+  .logo-orb span {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #dbeafe;
+  }
+
+  .logo-orb i {
+    position: absolute;
+    inset: -6px;
+    border-radius: 50%;
+    border: 1px dashed rgba(147, 197, 253, 0.5);
+  }
+
+  .logo-orb i:nth-child(3) {
+    inset: -15px;
+    animation: spinReverse 12s linear infinite;
+  }
+
+  .tag {
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    font-size: 0.75rem;
+    color: #7dd3fc;
+    margin: 0;
+  }
+
+  h1 {
+    margin: 0.6rem 0;
+    font-size: clamp(2rem, 5vw, 3.8rem);
+  }
+
+  .content > p {
+    font-size: clamp(1rem, 2vw, 1.16rem);
+    max-width: 58ch;
+  }
+
+  .actions {
+    display: flex;
+    gap: 0.8rem;
+    flex-wrap: wrap;
+    margin-top: 1.1rem;
+  }
+
+  .actions a {
+    text-decoration: none;
+    color: #082f49;
+    background: #bae6fd;
+    border-radius: 999px;
+    font-weight: 700;
+    padding: 0.75rem 1.1rem;
+  }
+
+  @keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+  }
+
+  @keyframes spinReverse {
+    from { transform: rotate(360deg); }
+    to { transform: rotate(0deg); }
+  }
+</style>

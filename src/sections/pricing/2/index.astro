@@ -1,0 +1,226 @@
+<!--
+  PRICING VARIANT 2 — Tabla comparativa horizontal
+  ===================================================
+  Estilo: Tabla de comparacion de planes con filas de features y checkmarks.
+
+  ELEMENTOS A SUSTITUIR:
+  ┌──────────────────────────────────────────────────────────────┐
+  │ .eyebrow         → Texto corto de categoria/etiqueta         │
+  │ h2               → Titulo principal de la seccion             │
+  │ .intro           → Parrafo descriptivo de apoyo              │
+  │ thead th         → Nombre de cada plan (x3)                  │
+  │ .plan-price      → Precio de cada plan (x3)                  │
+  │ tbody td:first   → Nombre de cada feature (filas)            │
+  │ tbody td         → ✓ o ✗ segun disponibilidad               │
+  │ tfoot a          → Texto + href del CTA de cada plan (x3)   │
+  └──────────────────────────────────────────────────────────────┘
+-->
+
+<section class="pricing-two">
+  <div class="header">
+    <!-- EYEBROW: Etiqueta superior corta -->
+    <p class="eyebrow">Lorem Ipsum</p>
+    <!-- TITULO: Headline principal -->
+    <h2>Voluptatem accusantium doloremque laudantium</h2>
+    <!-- INTRO: Parrafo de apoyo -->
+    <p class="intro">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nemo enim ipsam voluptatem.</p>
+  </div>
+
+  <!-- TABLA: Comparacion de planes -->
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th></th>
+          <!-- PLAN 1 -->
+          <th>
+            <span class="plan-name">Lorem</span>
+            <span class="plan-price">$9</span>
+          </th>
+          <!-- PLAN 2 -->
+          <th class="highlight">
+            <span class="plan-name">Ipsum</span>
+            <span class="plan-price">$29</span>
+          </th>
+          <!-- PLAN 3 -->
+          <th>
+            <span class="plan-name">Dolor</span>
+            <span class="plan-price">$79</span>
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- FEATURE 1 -->
+        <tr>
+          <td>Consectetur adipiscing</td>
+          <td>&#10003;</td>
+          <td class="highlight">&#10003;</td>
+          <td>&#10003;</td>
+        </tr>
+        <!-- FEATURE 2 -->
+        <tr>
+          <td>Sed do eiusmod tempor</td>
+          <td>&#10003;</td>
+          <td class="highlight">&#10003;</td>
+          <td>&#10003;</td>
+        </tr>
+        <!-- FEATURE 3 -->
+        <tr>
+          <td>Incididunt ut labore</td>
+          <td>&#10007;</td>
+          <td class="highlight">&#10003;</td>
+          <td>&#10003;</td>
+        </tr>
+        <!-- FEATURE 4 -->
+        <tr>
+          <td>Dolore magna aliqua</td>
+          <td>&#10007;</td>
+          <td class="highlight">&#10003;</td>
+          <td>&#10003;</td>
+        </tr>
+        <!-- FEATURE 5 -->
+        <tr>
+          <td>Ut enim ad minim</td>
+          <td>&#10007;</td>
+          <td class="highlight">&#10007;</td>
+          <td>&#10003;</td>
+        </tr>
+        <!-- FEATURE 6 -->
+        <tr>
+          <td>Quis nostrud exercitation</td>
+          <td>&#10007;</td>
+          <td class="highlight">&#10007;</td>
+          <td>&#10003;</td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <td></td>
+          <!-- CTA PLAN 1 -->
+          <td><a href="#">Lorem</a></td>
+          <!-- CTA PLAN 2 -->
+          <td class="highlight"><a href="#" class="featured">Ipsum</a></td>
+          <!-- CTA PLAN 3 -->
+          <td><a href="#">Dolor</a></td>
+        </tr>
+      </tfoot>
+    </table>
+  </div>
+</section>
+
+<style>
+  .pricing-two {
+    padding: clamp(3rem, 6vw, 5rem);
+    background: linear-gradient(180deg, #0f172a 0%, #0c0c1d 100%);
+    color: #e2e8f0;
+  }
+
+  .header {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto 2.5rem;
+  }
+
+  .eyebrow {
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    font-size: 0.78rem;
+    font-weight: 700;
+    color: #f472b6;
+  }
+
+  h2 {
+    margin: 0.4rem 0;
+    font-size: clamp(1.8rem, 4vw, 2.8rem);
+    line-height: 1.1;
+    color: #f1f5f9;
+  }
+
+  .intro {
+    margin: 0;
+    color: #94a3b8;
+  }
+
+  .table-wrap {
+    overflow-x: auto;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+  }
+
+  thead th {
+    padding: 1.2rem 1rem;
+    text-align: center;
+    vertical-align: bottom;
+    border-bottom: 1px solid rgba(244, 114, 182, 0.15);
+  }
+
+  .plan-name {
+    display: block;
+    font-size: 0.82rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: #f9a8d4;
+    font-weight: 700;
+  }
+
+  .plan-price {
+    display: block;
+    font-size: 2rem;
+    font-weight: 800;
+    color: #f1f5f9;
+    margin-top: 0.2rem;
+  }
+
+  tbody td {
+    padding: 0.75rem 1rem;
+    text-align: center;
+    border-bottom: 1px solid rgba(244, 114, 182, 0.06);
+    font-size: 0.9rem;
+    color: #94a3b8;
+  }
+
+  tbody td:first-child {
+    text-align: left;
+    font-weight: 600;
+    color: #cbd5e1;
+  }
+
+  .highlight {
+    background: rgba(244, 114, 182, 0.06);
+  }
+
+  tfoot td {
+    padding: 1.2rem 1rem;
+    text-align: center;
+  }
+
+  tfoot a {
+    display: inline-block;
+    text-decoration: none;
+    padding: 0.6rem 1.3rem;
+    border-radius: 999px;
+    font-weight: 700;
+    font-size: 0.88rem;
+    color: #f9a8d4;
+    border: 1px solid rgba(244, 114, 182, 0.25);
+    background: transparent;
+    transition: background 0.2s;
+  }
+
+  tfoot a.featured {
+    background: #ec4899;
+    color: #fff;
+    border-color: #ec4899;
+  }
+
+  tfoot a:hover {
+    background: rgba(244, 114, 182, 0.15);
+  }
+</style>

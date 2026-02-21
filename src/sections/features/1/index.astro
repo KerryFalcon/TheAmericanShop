@@ -1,0 +1,140 @@
+<!--
+  FEATURES VARIANT 1 — Grid de caracteristicas
+  ===============================================
+  Estilo: Fondo oscuro con grid de tarjetas de features/beneficios.
+
+  ELEMENTOS A SUSTITUIR:
+  ┌──────────────────────────────────────────────────────────────┐
+  │ .eyebrow         → Texto corto de categoria/etiqueta         │
+  │ h2               → Titulo principal de la seccion             │
+  │ .intro           → Parrafo descriptivo de apoyo              │
+  │ .card h3         → Titulo de cada feature (x6)                │
+  │ .card p          → Descripcion de cada feature (x6)           │
+  │ .card .icon      → Emoji o icono de cada feature (x6)         │
+  │                    Agregar o quitar tarjetas segun necesidad  │
+  └──────────────────────────────────────────────────────────────┘
+-->
+
+<section class="features-one">
+  <div class="header">
+    <!-- EYEBROW: Etiqueta superior corta -->
+    <p class="eyebrow">Lorem Ipsum</p>
+
+    <!-- TITULO: Headline principal de la seccion -->
+    <h2>Sed do eiusmod tempor incididunt ut labore et dolore</h2>
+
+    <!-- INTRO: Parrafo de apoyo -->
+    <p class="intro">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut enim ad minim veniam, quis nostrud
+      exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+    </p>
+  </div>
+
+  <!-- GRID DE FEATURES: Cada .card es una feature independiente -->
+  <div class="grid">
+    <div class="card">
+      <span class="icon">&#9670;</span>
+      <h3>Lorem Ipsum Dolor</h3>
+      <p>Consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore.</p>
+    </div>
+    <div class="card">
+      <span class="icon">&#9674;</span>
+      <h3>Amet Consectetur</h3>
+      <p>Ut enim ad minim veniam quis nostrud exercitation ullamco laboris.</p>
+    </div>
+    <div class="card">
+      <span class="icon">&#9656;</span>
+      <h3>Adipiscing Elit Sed</h3>
+      <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum.</p>
+    </div>
+    <div class="card">
+      <span class="icon">&#9650;</span>
+      <h3>Eiusmod Tempor</h3>
+      <p>Excepteur sint occaecat cupidatat non proident sunt in culpa qui officia.</p>
+    </div>
+    <div class="card">
+      <span class="icon">&#9679;</span>
+      <h3>Incididunt Labore</h3>
+      <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium.</p>
+    </div>
+    <div class="card">
+      <span class="icon">&#9733;</span>
+      <h3>Dolore Magna</h3>
+      <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit.</p>
+    </div>
+  </div>
+</section>
+
+<style>
+  .features-one {
+    padding: clamp(3rem, 6vw, 5rem);
+    background: linear-gradient(180deg, #0a0a0f 0%, #111827 100%);
+    color: #e2e8f0;
+  }
+
+  .header {
+    max-width: 680px;
+    margin-bottom: 2.5rem;
+  }
+
+  .eyebrow {
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    font-size: 0.78rem;
+    font-weight: 700;
+    color: #a78bfa;
+  }
+
+  h2 {
+    margin: 0.5rem 0;
+    font-size: clamp(1.8rem, 4vw, 3rem);
+    line-height: 1.1;
+    color: #f1f5f9;
+  }
+
+  .intro {
+    margin: 0;
+    color: #94a3b8;
+    max-width: 60ch;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1rem;
+  }
+
+  .card {
+    background: rgba(15, 23, 42, 0.6);
+    border: 1px solid rgba(167, 139, 250, 0.18);
+    border-radius: 16px;
+    padding: 1.4rem;
+    transition: transform 0.2s ease, border-color 0.2s ease;
+  }
+
+  .card:hover {
+    transform: translateY(-3px);
+    border-color: rgba(167, 139, 250, 0.45);
+  }
+
+  .icon {
+    display: block;
+    font-size: 1.5rem;
+    margin-bottom: 0.6rem;
+    color: #a78bfa;
+  }
+
+  .card h3 {
+    margin: 0 0 0.4rem;
+    font-size: 1.1rem;
+    color: #e2e8f0;
+  }
+
+  .card p {
+    margin: 0;
+    font-size: 0.95rem;
+    color: #94a3b8;
+    line-height: 1.5;
+  }
+</style>

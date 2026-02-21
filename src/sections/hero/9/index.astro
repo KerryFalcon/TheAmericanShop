@@ -1,0 +1,172 @@
+<!--
+  HERO VARIANT 9 — Video placeholder con countdown
+  ===================================================
+  Estilo: Fondo con patron de lineas diagonales, countdown/stats prominentes, layout centrado.
+
+  ELEMENTOS A SUSTITUIR:
+  ┌──────────────────────────────────────────────────────────────┐
+  │ .tag             → Texto corto de categoria/etiqueta         │
+  │ h1               → Titulo principal del hero                 │
+  │ .desc            → Parrafo descriptivo de apoyo              │
+  │ .countdown dt    → Cifra/dato destacado (x4)                 │
+  │ .countdown dd    → Etiqueta de cada dato (x4)                │
+  │ .cta a           → Texto + href de cada CTA (x2)             │
+  │ .lines           → Decorativo, no requiere sustitucion       │
+  └──────────────────────────────────────────────────────────────┘
+-->
+
+<section class="hero-nine">
+  <div class="lines" aria-hidden="true"></div>
+
+  <div class="content">
+    <!-- TAG: Etiqueta superior corta -->
+    <p class="tag">Lorem Ipsum</p>
+
+    <!-- TITULO: Headline principal del hero -->
+    <h1>Quis autem vel eum iure reprehenderit qui in ea voluptate</h1>
+
+    <!-- DESCRIPCION: Parrafo de apoyo -->
+    <p class="desc">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nemo enim ipsam voluptatem quia
+      voluptas sit aspernatur aut odit aut fugit.
+    </p>
+
+    <!-- COUNTDOWN: 4 bloques de dato + etiqueta -->
+    <dl class="countdown">
+      <div>
+        <dt>128</dt>
+        <dd>Lorem</dd>
+      </div>
+      <div>
+        <dt>64</dt>
+        <dd>Ipsum</dd>
+      </div>
+      <div>
+        <dt>12K</dt>
+        <dd>Dolor</dd>
+      </div>
+      <div>
+        <dt>99%</dt>
+        <dd>Amet</dd>
+      </div>
+    </dl>
+
+    <div class="cta">
+      <!-- CTA 1: Boton primario -->
+      <a href="#" class="primary">Lorem Ipsum</a>
+      <!-- CTA 2: Boton secundario -->
+      <a href="#" class="outline">Dolor Sit</a>
+    </div>
+  </div>
+</section>
+
+<style>
+  .hero-nine {
+    position: relative;
+    overflow: hidden;
+    padding: clamp(3rem, 6vw, 5rem);
+    min-height: 480px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: linear-gradient(160deg, #0c0c1d 0%, #1a1035 50%, #0d1117 100%);
+    color: #eef2ff;
+  }
+
+  .lines {
+    position: absolute;
+    inset: 0;
+    background: repeating-linear-gradient(
+      -45deg,
+      transparent,
+      transparent 40px,
+      rgba(99, 102, 241, 0.06) 40px,
+      rgba(99, 102, 241, 0.06) 41px
+    );
+    pointer-events: none;
+  }
+
+  .content {
+    position: relative;
+    z-index: 2;
+    max-width: 750px;
+  }
+
+  .tag {
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    font-size: 0.72rem;
+    font-weight: 700;
+    color: #818cf8;
+  }
+
+  h1 {
+    margin: 0.5rem 0;
+    font-size: clamp(2rem, 5vw, 3.6rem);
+    line-height: 1.08;
+  }
+
+  .desc {
+    margin: 0 auto 1.5rem;
+    max-width: 55ch;
+    color: #a5b4fc;
+  }
+
+  .countdown {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin: 0 0 1.5rem;
+    flex-wrap: wrap;
+  }
+
+  .countdown div {
+    background: rgba(99, 102, 241, 0.12);
+    border: 1px solid rgba(99, 102, 241, 0.25);
+    border-radius: 14px;
+    padding: 1rem 1.5rem;
+    min-width: 100px;
+  }
+
+  .countdown dt {
+    font-size: 2rem;
+    font-weight: 800;
+    color: #c7d2fe;
+  }
+
+  .countdown dd {
+    margin: 0;
+    font-size: 0.78rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: #818cf8;
+  }
+
+  .cta {
+    display: flex;
+    justify-content: center;
+    gap: 0.8rem;
+    flex-wrap: wrap;
+  }
+
+  .primary {
+    text-decoration: none;
+    background: #6366f1;
+    color: #fff;
+    padding: 0.75rem 1.3rem;
+    border-radius: 999px;
+    font-weight: 700;
+  }
+
+  .outline {
+    text-decoration: none;
+    background: transparent;
+    color: #a5b4fc;
+    padding: 0.75rem 1.3rem;
+    border-radius: 999px;
+    font-weight: 700;
+    border: 1px solid rgba(99, 102, 241, 0.4);
+  }
+</style>

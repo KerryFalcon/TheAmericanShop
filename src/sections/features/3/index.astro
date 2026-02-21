@@ -1,0 +1,154 @@
+<!--
+  FEATURES VARIANT 3 — Timeline vertical
+  =========================================
+  Estilo: Lista de features presentada como timeline vertical con linea conectora.
+
+  ELEMENTOS A SUSTITUIR:
+  ┌──────────────────────────────────────────────────────────────┐
+  │ .eyebrow         → Texto corto de categoria/etiqueta         │
+  │ h2               → Titulo principal de la seccion             │
+  │ .intro           → Parrafo descriptivo de apoyo              │
+  │ .step .number    → Numero o icono del paso (x4)               │
+  │ .step h3         → Titulo de cada paso (x4)                   │
+  │ .step p          → Descripcion de cada paso (x4)              │
+  │ .line            → Decorativo, no requiere sustitucion       │
+  └──────────────────────────────────────────────────────────────┘
+-->
+
+<section class="features-three">
+  <div class="header">
+    <!-- EYEBROW: Etiqueta superior corta -->
+    <p class="eyebrow">Lorem Ipsum</p>
+    <!-- TITULO: Headline principal -->
+    <h2>Ut enim ad minima veniam quis nostrum exercitationem</h2>
+    <!-- INTRO: Parrafo de apoyo -->
+    <p class="intro">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis autem vel eum iure reprehenderit.</p>
+  </div>
+
+  <div class="timeline">
+    <div class="line" aria-hidden="true"></div>
+
+    <!-- PASO 1 -->
+    <div class="step">
+      <span class="number">01</span>
+      <div>
+        <h3>Lorem Ipsum Dolor</h3>
+        <p>Consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+      </div>
+    </div>
+
+    <!-- PASO 2 -->
+    <div class="step">
+      <span class="number">02</span>
+      <div>
+        <h3>Amet Consectetur</h3>
+        <p>Ut enim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.</p>
+      </div>
+    </div>
+
+    <!-- PASO 3 -->
+    <div class="step">
+      <span class="number">03</span>
+      <div>
+        <h3>Adipiscing Elit Sed</h3>
+        <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla.</p>
+      </div>
+    </div>
+
+    <!-- PASO 4 -->
+    <div class="step">
+      <span class="number">04</span>
+      <div>
+        <h3>Eiusmod Tempor Incididunt</h3>
+        <p>Excepteur sint occaecat cupidatat non proident sunt in culpa qui officia deserunt mollit anim.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .features-three {
+    padding: clamp(3rem, 6vw, 5rem);
+    background: linear-gradient(180deg, #0f172a 0%, #0c0c1d 100%);
+    color: #e2e8f0;
+  }
+
+  .header {
+    max-width: 600px;
+    margin-bottom: 3rem;
+  }
+
+  .eyebrow {
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    font-size: 0.78rem;
+    font-weight: 700;
+    color: #f472b6;
+  }
+
+  h2 {
+    margin: 0.4rem 0;
+    font-size: clamp(1.8rem, 4vw, 2.8rem);
+    line-height: 1.1;
+    color: #f1f5f9;
+  }
+
+  .intro {
+    margin: 0;
+    color: #94a3b8;
+    max-width: 55ch;
+  }
+
+  .timeline {
+    position: relative;
+    display: grid;
+    gap: 2rem;
+    padding-left: 3rem;
+  }
+
+  .line {
+    position: absolute;
+    left: 14px;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: linear-gradient(180deg, #f472b6, #ec4899, rgba(236, 72, 153, 0.1));
+  }
+
+  .step {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 1.2rem;
+    align-items: start;
+    position: relative;
+  }
+
+  .number {
+    display: grid;
+    place-content: center;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: #831843;
+    color: #fce7f3;
+    font-size: 0.72rem;
+    font-weight: 800;
+    margin-left: -3rem;
+    position: relative;
+    z-index: 2;
+  }
+
+  .step h3 {
+    margin: 0 0 0.3rem;
+    font-size: 1.15rem;
+    color: #fce7f3;
+  }
+
+  .step p {
+    margin: 0;
+    color: #94a3b8;
+    line-height: 1.6;
+    max-width: 50ch;
+  }
+</style>

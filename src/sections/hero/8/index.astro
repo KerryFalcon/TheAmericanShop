@@ -1,0 +1,122 @@
+<!--
+  HERO VARIANT 8 — Tipografia gigante con marquee
+  ==================================================
+  Estilo: Texto enorme que ocupa todo el viewport, con marquee horizontal animado.
+
+  ELEMENTOS A SUSTITUIR:
+  ┌──────────────────────────────────────────────────────────────┐
+  │ .subtitle        → Texto corto de categoria/etiqueta         │
+  │ .giant-text      → Palabra o frase gigante principal          │
+  │ .marquee span    → Texto que se repite en el marquee          │
+  │ .bottom p        → Parrafo descriptivo de apoyo              │
+  │ .bottom a        → Texto + href del CTA                       │
+  └──────────────────────────────────────────────────────────────┘
+-->
+
+<section class="hero-eight">
+  <!-- SUBTITLE: Etiqueta superior corta -->
+  <p class="subtitle">Lorem Ipsum Dolor</p>
+
+  <!-- GIANT TEXT: Palabra o frase enorme que domina la seccion -->
+  <h1 class="giant-text">LOREM</h1>
+
+  <!-- MARQUEE: Texto que se desplaza horizontalmente en loop -->
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee-inner">
+      <span>consectetur adipiscing elit &bull; sed do eiusmod tempor &bull; incididunt ut labore &bull; dolore magna aliqua &bull;&nbsp;</span>
+      <span>consectetur adipiscing elit &bull; sed do eiusmod tempor &bull; incididunt ut labore &bull; dolore magna aliqua &bull;&nbsp;</span>
+    </div>
+  </div>
+
+  <div class="bottom">
+    <!-- DESCRIPCION: Parrafo de apoyo -->
+    <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.</p>
+    <!-- CTA: Boton de accion -->
+    <a href="#">Lorem Ipsum</a>
+  </div>
+</section>
+
+<style>
+  .hero-eight {
+    position: relative;
+    overflow: hidden;
+    padding: clamp(2rem, 4vw, 3rem) clamp(1.5rem, 4vw, 3rem);
+    min-height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: #050510;
+    color: #f0f0f5;
+  }
+
+  .subtitle {
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 0.25em;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #f472b6;
+  }
+
+  .giant-text {
+    margin: 0;
+    font-size: clamp(5rem, 18vw, 14rem);
+    font-weight: 900;
+    line-height: 0.9;
+    letter-spacing: -0.04em;
+    background: linear-gradient(135deg, #f472b6, #c084fc, #60a5fa);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .marquee {
+    width: 100%;
+    overflow: hidden;
+    margin: 1.5rem 0;
+    border-top: 1px solid rgba(244, 114, 182, 0.2);
+    border-bottom: 1px solid rgba(244, 114, 182, 0.2);
+    padding: 0.6rem 0;
+  }
+
+  .marquee-inner {
+    display: flex;
+    width: max-content;
+    animation: scroll 20s linear infinite;
+  }
+
+  .marquee span {
+    white-space: nowrap;
+    font-size: 0.85rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #a78bfa;
+  }
+
+  .bottom {
+    max-width: 500px;
+  }
+
+  .bottom p {
+    margin: 0 0 1rem;
+    color: #94a3b8;
+    font-size: 0.95rem;
+  }
+
+  .bottom a {
+    display: inline-block;
+    text-decoration: none;
+    background: linear-gradient(135deg, #f472b6, #c084fc);
+    color: #0f0520;
+    padding: 0.7rem 1.4rem;
+    border-radius: 999px;
+    font-weight: 700;
+  }
+
+  @keyframes scroll {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+  }
+</style>

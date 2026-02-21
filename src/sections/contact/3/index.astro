@@ -1,0 +1,166 @@
+<!--
+  CONTACT VARIANT 3 — CTA grande con mapa placeholder
+  ======================================================
+  Estilo: Seccion dividida con CTA prominente a la izquierda y mapa/placeholder a la derecha.
+
+  ELEMENTOS A SUSTITUIR:
+  ┌──────────────────────────────────────────────────────────────┐
+  │ .eyebrow         → Texto corto de categoria/etiqueta         │
+  │ h2               → Titulo principal de la seccion             │
+  │ .desc            → Parrafo descriptivo de apoyo              │
+  │ .cta-primary     → Texto + href del CTA principal             │
+  │ .cta-secondary   → Texto + href del CTA secundario            │
+  │ .detail h3       → Titulo de cada dato de contacto (x2)      │
+  │ .detail p        → Detalle de cada dato (x2)                 │
+  │ .map-placeholder → Sustituir por iframe de mapa o imagen     │
+  └──────────────────────────────────────────────────────────────┘
+-->
+
+<section class="contact-three">
+  <div class="left">
+    <!-- EYEBROW: Etiqueta superior corta -->
+    <p class="eyebrow">Lorem Ipsum</p>
+
+    <!-- TITULO: Headline principal -->
+    <h2>Neque porro quisquam est qui dolorem</h2>
+
+    <!-- DESCRIPCION: Parrafo de apoyo -->
+    <p class="desc">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt
+      ut labore et dolore magna aliqua.
+    </p>
+
+    <div class="ctas">
+      <!-- CTA PRINCIPAL -->
+      <a href="#" class="cta-primary">Lorem Ipsum</a>
+      <!-- CTA SECUNDARIO -->
+      <a href="#" class="cta-secondary">Dolor Sit &rarr;</a>
+    </div>
+
+    <div class="details">
+      <!-- DATO 1 -->
+      <div class="detail">
+        <h3>Lorem Ipsum</h3>
+        <p>lorem@ipsum.dolor</p>
+      </div>
+      <!-- DATO 2 -->
+      <div class="detail">
+        <h3>Amet Sit</h3>
+        <p>+1 (555) 012-3456</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="right">
+    <!-- MAPA: Sustituir por <iframe> de Google Maps o imagen -->
+    <div class="map-placeholder" aria-label="Ubicacion en mapa">
+      <span>&#9873; Lorem Ipsum, 123</span>
+    </div>
+  </div>
+</section>
+
+<style>
+  .contact-three {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    padding: clamp(3rem, 6vw, 5rem);
+    background: linear-gradient(135deg, #052e16 0%, #0a0a0f 50%, #0c1a2e 100%);
+    color: #e2e8f0;
+  }
+
+  .eyebrow {
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    font-size: 0.78rem;
+    font-weight: 700;
+    color: #4ade80;
+  }
+
+  h2 {
+    margin: 0.4rem 0;
+    font-size: clamp(1.8rem, 4vw, 2.8rem);
+    line-height: 1.1;
+    color: #f1f5f9;
+  }
+
+  .desc {
+    margin: 0 0 1.5rem;
+    color: #94a3b8;
+    max-width: 48ch;
+  }
+
+  .ctas {
+    display: flex;
+    gap: 0.8rem;
+    flex-wrap: wrap;
+    margin-bottom: 2rem;
+  }
+
+  .cta-primary {
+    text-decoration: none;
+    background: #4ade80;
+    color: #052e16;
+    padding: 0.75rem 1.3rem;
+    border-radius: 999px;
+    font-weight: 700;
+  }
+
+  .cta-secondary {
+    text-decoration: none;
+    color: #4ade80;
+    padding: 0.75rem 1.3rem;
+    border-radius: 999px;
+    font-weight: 700;
+    border: 1px solid rgba(74, 222, 128, 0.3);
+  }
+
+  .details {
+    display: grid;
+    gap: 0.8rem;
+  }
+
+  .detail {
+    padding: 0.7rem;
+    border-left: 3px solid #4ade80;
+    background: rgba(5, 46, 22, 0.4);
+    border-radius: 0 10px 10px 0;
+  }
+
+  .detail h3 {
+    margin: 0;
+    font-size: 0.85rem;
+    color: #4ade80;
+  }
+
+  .detail p {
+    margin: 0.15rem 0 0;
+    color: #94a3b8;
+    font-size: 0.9rem;
+  }
+
+  .right {
+    display: flex;
+    align-items: stretch;
+  }
+
+  .map-placeholder {
+    width: 100%;
+    min-height: 350px;
+    border-radius: 18px;
+    background: linear-gradient(135deg, rgba(74, 222, 128, 0.08), rgba(16, 185, 129, 0.04));
+    border: 1px solid rgba(74, 222, 128, 0.15);
+    display: grid;
+    place-content: center;
+    color: #4ade80;
+    font-size: 1.1rem;
+    font-weight: 600;
+  }
+
+  @media (max-width: 768px) {
+    .contact-three {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

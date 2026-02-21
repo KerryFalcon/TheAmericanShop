@@ -1,0 +1,152 @@
+<!--
+  HERO VARIANT 7 — Inmersivo neon con glass panel
+  =================================================
+  Estilo: Fondo oscuro con orbes neon flotantes, textura de ruido, panel glass.
+
+  ELEMENTOS A SUSTITUIR:
+  ┌──────────────────────────────────────────────────────────────┐
+  │ .label           → Texto corto de categoria/etiqueta         │
+  │ h1               → Titulo principal del hero                 │
+  │ .glass-panel > p → Parrafo descriptivo de apoyo              │
+  │ .stats span      → Cifra/dato destacado (x3)                 │
+  │ .stats small     → Descripcion de cada dato (x3)             │
+  │ .orb-a/b         → Decorativo, cambiar colores si necesario  │
+  │ .texture         → Decorativo, no requiere sustitucion       │
+  └──────────────────────────────────────────────────────────────┘
+-->
+
+<section class="hero-seven">
+  <div class="glass-panel">
+    <!-- LABEL: Etiqueta superior corta -->
+    <p class="label">Lorem Ipsum</p>
+
+    <!-- TITULO: Headline principal del hero -->
+    <h1>Voluptate velit esse cillum dolore eu fugiat nulla pariatur</h1>
+
+    <!-- DESCRIPCION: Parrafo de apoyo -->
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore
+      et dolore magna aliqua. Excepteur sint occaecat cupidatat.
+    </p>
+
+    <!-- STATS: 3 bloques de dato + descripcion -->
+    <div class="stats">
+      <div><span>42</span><small>Lorem ipsum dolor</small></div>
+      <div><span>09</span><small>Consectetur elit</small></div>
+      <div><span>3.4x</span><small>Adipiscing tempor</small></div>
+    </div>
+  </div>
+
+  <div class="texture" aria-hidden="true"></div>
+  <div class="orb orb-a" aria-hidden="true"></div>
+  <div class="orb orb-b" aria-hidden="true"></div>
+</section>
+
+<style>
+  .hero-seven {
+    position: relative;
+    overflow: hidden;
+    min-height: 430px;
+    padding: clamp(2rem, 5vw, 4.5rem);
+    background: radial-gradient(circle at 8% 12%, #312e81 0%, transparent 35%),
+      radial-gradient(circle at 90% 82%, #0f766e 0%, transparent 35%),
+      linear-gradient(135deg, #020617 0%, #111827 40%, #0f172a 100%);
+    color: #e2e8f0;
+  }
+
+  .glass-panel {
+    position: relative;
+    z-index: 2;
+    max-width: 690px;
+    background: rgba(15, 23, 42, 0.52);
+    border: 1px solid rgba(167, 139, 250, 0.35);
+    backdrop-filter: blur(6px);
+    border-radius: 18px;
+    padding: clamp(1.2rem, 3.2vw, 2rem);
+  }
+
+  .label {
+    margin: 0;
+    color: #c4b5fd;
+    text-transform: uppercase;
+    letter-spacing: 0.16em;
+    font-size: 0.74rem;
+    font-weight: 700;
+  }
+
+  h1 {
+    margin: 0.6rem 0;
+    font-size: clamp(1.9rem, 4.6vw, 3.4rem);
+    line-height: 1.1;
+  }
+
+  .glass-panel > p {
+    margin: 0;
+    color: #dbeafe;
+    max-width: 58ch;
+  }
+
+  .stats {
+    margin-top: 1.4rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+    gap: 0.8rem;
+  }
+
+  .stats div {
+    border: 1px solid rgba(103, 232, 249, 0.35);
+    border-radius: 12px;
+    padding: 0.75rem;
+    background: rgba(2, 6, 23, 0.48);
+  }
+
+  .stats span {
+    display: block;
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #67e8f9;
+  }
+
+  .stats small {
+    color: #bfdbfe;
+  }
+
+  .texture {
+    position: absolute;
+    inset: 0;
+    background-image: radial-gradient(rgba(255, 255, 255, 0.08) 1px, transparent 1px);
+    background-size: 6px 6px;
+    opacity: 0.22;
+    z-index: 1;
+  }
+
+  .orb {
+    position: absolute;
+    border-radius: 999px;
+    filter: blur(8px);
+    z-index: 0;
+    animation: drift 12s ease-in-out infinite;
+  }
+
+  .orb-a {
+    width: 200px;
+    height: 200px;
+    right: 8%;
+    top: 12%;
+    background: radial-gradient(circle, rgba(99, 102, 241, 0.8), rgba(99, 102, 241, 0));
+  }
+
+  .orb-b {
+    width: 260px;
+    height: 260px;
+    right: 30%;
+    bottom: -50px;
+    background: radial-gradient(circle, rgba(20, 184, 166, 0.7), rgba(20, 184, 166, 0));
+    animation-delay: -5s;
+  }
+
+  @keyframes drift {
+    0%, 100% { transform: translate(0, 0) scale(1); }
+    50% { transform: translate(16px, -14px) scale(1.08); }
+  }
+</style>

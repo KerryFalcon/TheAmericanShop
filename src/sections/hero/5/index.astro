@@ -1,0 +1,126 @@
+<!--
+  HERO VARIANT 5 — Carrusel de fondos
+  =====================================
+  Estilo: 3 capas de fondo que rotan con animacion, texto estable al frente.
+
+  ELEMENTOS A SUSTITUIR:
+  ┌──────────────────────────────────────────────────────────────┐
+  │ .eyebrow         → Texto corto de categoria/etiqueta         │
+  │ h1               → Titulo principal del hero                 │
+  │ .content > p     → Parrafo descriptivo de apoyo              │
+  │ .cta-row a       → Texto + href de cada CTA (x2)             │
+  │ .layer-a/b/c     → Decorativo, cambiar colores/gradientes    │
+  └──────────────────────────────────────────────────────────────┘
+-->
+
+<section class="hero-five">
+  <div class="layer layer-a"></div>
+  <div class="layer layer-b"></div>
+  <div class="layer layer-c"></div>
+
+  <div class="content">
+    <!-- EYEBROW: Etiqueta superior corta -->
+    <p class="eyebrow">Lorem Ipsum</p>
+
+    <!-- TITULO: Headline principal del hero -->
+    <h1>Excepteur sint occaecat cupidatat non proident sunt in culpa</h1>
+
+    <!-- DESCRIPCION: Parrafo de apoyo -->
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore
+      et dolore magna aliqua. Ut enim ad minim veniam quis nostrud exercitation.
+    </p>
+
+    <div class="cta-row">
+      <!-- CTA 1: Boton primario -->
+      <a href="#">Lorem Ipsum</a>
+      <!-- CTA 2: Boton secundario -->
+      <a href="#">Dolor Sit</a>
+    </div>
+  </div>
+</section>
+
+<style>
+  .hero-five {
+    position: relative;
+    overflow: hidden;
+    min-height: 430px;
+    padding: clamp(2.5rem, 6vw, 5rem);
+    isolation: isolate;
+    color: #f8fafc;
+  }
+
+  .layer {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    z-index: -2;
+    animation: bgCycle 16s infinite;
+  }
+
+  .layer-a {
+    background: radial-gradient(circle at 20% 20%, #fde68a 0%, transparent 38%),
+      linear-gradient(135deg, #78350f, #431407 65%, #111827);
+    animation-delay: 0s;
+  }
+
+  .layer-b {
+    background: radial-gradient(circle at 80% 30%, #93c5fd 0%, transparent 35%),
+      repeating-linear-gradient(45deg, rgba(255, 255, 255, 0.08) 0 14px, transparent 14px 28px),
+      linear-gradient(135deg, #0f172a, #1e3a8a, #312e81);
+    animation-delay: 5.3s;
+  }
+
+  .layer-c {
+    background: radial-gradient(circle at 60% 75%, #6ee7b7 0%, transparent 35%),
+      linear-gradient(120deg, #052e16, #0f766e 55%, #042f2e);
+    animation-delay: 10.6s;
+  }
+
+  .content {
+    max-width: 700px;
+    position: relative;
+    z-index: 2;
+  }
+
+  .eyebrow {
+    margin: 0;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #bfdbfe;
+    font-size: 0.8rem;
+  }
+
+  h1 {
+    margin: 0.6rem 0;
+    font-size: clamp(2rem, 5vw, 3.8rem);
+    line-height: 1.08;
+  }
+
+  .content > p {
+    max-width: 60ch;
+    color: #e2e8f0;
+  }
+
+  .cta-row {
+    margin-top: 1.2rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+  }
+
+  .cta-row a {
+    text-decoration: none;
+    border-radius: 999px;
+    padding: 0.72rem 1.1rem;
+    font-weight: 700;
+    color: #082f49;
+    background: #e0f2fe;
+  }
+
+  @keyframes bgCycle {
+    0%, 24% { opacity: 1; }
+    33%, 100% { opacity: 0; }
+  }
+</style>

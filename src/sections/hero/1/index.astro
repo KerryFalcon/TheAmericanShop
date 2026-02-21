@@ -1,0 +1,153 @@
+<!--
+  HERO VARIANT 1 — Editorial con metricas
+  =========================================
+  Estilo: Fondo oscuro con acento esmeralda, composicion editorial dramatica.
+
+  ELEMENTOS A SUSTITUIR:
+  ┌─────────────────────────────────────────────────────────┐
+  │ .kicker          → Texto corto de categoria/etiqueta    │
+  │ h1               → Titulo principal del hero            │
+  │ .lead            → Parrafo descriptivo de apoyo         │
+  │ .btn-primary     → Texto + href del CTA principal       │
+  │ .btn-ghost       → Texto + href del CTA secundario      │
+  │ .metrics strong  → Cifra/dato destacado (x3)            │
+  │ .metrics span    → Descripcion de cada metrica (x3)     │
+  │ .halo            → Decorativo, no requiere sustitucion  │
+  └─────────────────────────────────────────────────────────┘
+-->
+
+<section class="hero-one">
+  <div class="hero-inner">
+    <!-- KICKER: Etiqueta superior corta -->
+    <p class="kicker">Lorem Ipsum</p>
+
+    <!-- TITULO: Headline principal del hero -->
+    <h1>Dolor sit amet consectetur adipiscing elit sed do eiusmod</h1>
+
+    <!-- DESCRIPCION: Parrafo de apoyo bajo el titulo -->
+    <p class="lead">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore
+      et dolore magna aliqua. Ut enim ad minim veniam quis nostrud.
+    </p>
+
+    <div class="actions">
+      <!-- CTA PRINCIPAL: Boton primario -->
+      <a href="#" class="btn btn-primary">Lorem Ipsum</a>
+      <!-- CTA SECUNDARIO: Boton ghost -->
+      <a href="#" class="btn btn-ghost">Dolor Sit</a>
+    </div>
+
+    <!-- METRICAS: 3 bloques de dato + descripcion -->
+    <ul class="metrics">
+      <li><strong>+120%</strong><span>Lorem ipsum dolor sit</span></li>
+      <li><strong>14 min</strong><span>Consectetur adipiscing</span></li>
+      <li><strong>24/7</strong><span>Sed do eiusmod tempor</span></li>
+    </ul>
+  </div>
+
+  <div class="halo" aria-hidden="true"></div>
+</section>
+
+<style>
+  .hero-one {
+    position: relative;
+    overflow: hidden;
+    padding: clamp(3rem, 7vw, 6rem);
+    color: #ecfff8;
+    background: radial-gradient(circle at 80% -20%, #5eead4 0%, transparent 45%),
+      linear-gradient(135deg, #052e2b 0%, #063c39 38%, #0f172a 100%);
+  }
+
+  .hero-inner {
+    max-width: 760px;
+    position: relative;
+    z-index: 2;
+  }
+
+  .kicker {
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    font-size: 0.78rem;
+    color: #7efdd8;
+    margin-bottom: 0.8rem;
+  }
+
+  h1 {
+    font-size: clamp(2rem, 5vw, 4rem);
+    margin: 0;
+    line-height: 1.05;
+  }
+
+  .lead {
+    margin-top: 1rem;
+    font-size: clamp(1rem, 2vw, 1.25rem);
+    color: #b4f9e5;
+    max-width: 62ch;
+  }
+
+  .actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+    margin-top: 1.6rem;
+  }
+
+  .btn {
+    text-decoration: none;
+    padding: 0.8rem 1.2rem;
+    border-radius: 999px;
+    font-weight: 600;
+    transition: transform 0.2s ease;
+  }
+
+  .btn:hover {
+    transform: translateY(-2px);
+  }
+
+  .btn-primary {
+    background: #6ff6cf;
+    color: #05312d;
+  }
+
+  .btn-ghost {
+    border: 1px solid #8fffe0;
+    color: #ccffee;
+  }
+
+  .metrics {
+    margin: 2rem 0 0;
+    padding: 0;
+    list-style: none;
+    display: grid;
+    gap: 0.9rem;
+    grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+  }
+
+  .metrics li {
+    background: rgba(9, 42, 39, 0.55);
+    border: 1px solid rgba(129, 255, 220, 0.22);
+    border-radius: 14px;
+    padding: 0.9rem;
+  }
+
+  .metrics strong {
+    display: block;
+    font-size: 1.2rem;
+  }
+
+  .metrics span {
+    color: #befde9;
+    font-size: 0.92rem;
+  }
+
+  .halo {
+    position: absolute;
+    width: 360px;
+    height: 360px;
+    right: -80px;
+    top: -80px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(126, 253, 216, 0.55), rgba(126, 253, 216, 0));
+    filter: blur(8px);
+  }
+</style>

@@ -1,0 +1,150 @@
+<!--
+  FEATURES VARIANT 4 — Bento grid asimetrico
+  =============================================
+  Estilo: Grid tipo bento con tarjetas de diferentes tamaños, efecto glassmorphism.
+
+  ELEMENTOS A SUSTITUIR:
+  ┌──────────────────────────────────────────────────────────────┐
+  │ .eyebrow         → Texto corto de categoria/etiqueta         │
+  │ h2               → Titulo principal de la seccion             │
+  │ .card h3         → Titulo de cada feature (x5)                │
+  │ .card p          → Descripcion de cada feature (x5)           │
+  │ .card .num       → Cifra o dato destacado (x5)                │
+  │                    Agregar o quitar tarjetas segun necesidad  │
+  └──────────────────────────────────────────────────────────────┘
+-->
+
+<section class="features-four">
+  <div class="header">
+    <!-- EYEBROW: Etiqueta superior corta -->
+    <p class="eyebrow">Lorem Ipsum</p>
+    <!-- TITULO: Headline principal -->
+    <h2>Sed ut perspiciatis unde omnis iste natus error sit</h2>
+  </div>
+
+  <!-- BENTO GRID: Tarjetas de diferentes tamaños -->
+  <div class="bento">
+    <!-- CARD GRANDE: Ocupa 2 columnas -->
+    <div class="card wide">
+      <span class="num">01</span>
+      <h3>Lorem Ipsum Dolor Sit Amet</h3>
+      <p>Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam quis nostrud.</p>
+    </div>
+
+    <!-- CARD NORMAL -->
+    <div class="card">
+      <span class="num">02</span>
+      <h3>Amet Consectetur</h3>
+      <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.</p>
+    </div>
+
+    <!-- CARD NORMAL -->
+    <div class="card">
+      <span class="num">03</span>
+      <h3>Adipiscing Elit</h3>
+      <p>Excepteur sint occaecat cupidatat non proident sunt in culpa qui officia.</p>
+    </div>
+
+    <!-- CARD NORMAL -->
+    <div class="card">
+      <span class="num">04</span>
+      <h3>Eiusmod Tempor</h3>
+      <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit.</p>
+    </div>
+
+    <!-- CARD GRANDE: Ocupa 2 columnas -->
+    <div class="card wide">
+      <span class="num">05</span>
+      <h3>Incididunt Ut Labore Et Dolore</h3>
+      <p>Sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam.</p>
+    </div>
+  </div>
+</section>
+
+<style>
+  .features-four {
+    padding: clamp(3rem, 6vw, 5rem);
+    background: radial-gradient(circle at 20% 80%, rgba(56, 189, 248, 0.08), transparent 50%),
+      linear-gradient(180deg, #0a0a12 0%, #0f172a 100%);
+    color: #e2e8f0;
+  }
+
+  .header {
+    max-width: 600px;
+    margin-bottom: 2.5rem;
+  }
+
+  .eyebrow {
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    font-size: 0.78rem;
+    font-weight: 700;
+    color: #38bdf8;
+  }
+
+  h2 {
+    margin: 0.4rem 0 0;
+    font-size: clamp(1.8rem, 4vw, 2.8rem);
+    line-height: 1.1;
+    color: #f1f5f9;
+  }
+
+  .bento {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+  }
+
+  .card {
+    background: rgba(15, 23, 42, 0.5);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(56, 189, 248, 0.12);
+    border-radius: 18px;
+    padding: 1.5rem;
+    transition: transform 0.2s ease, border-color 0.2s ease;
+  }
+
+  .card:hover {
+    transform: translateY(-2px);
+    border-color: rgba(56, 189, 248, 0.35);
+  }
+
+  .card.wide {
+    grid-column: span 2;
+  }
+
+  .num {
+    display: inline-block;
+    font-size: 0.7rem;
+    font-weight: 800;
+    color: #0c4a6e;
+    background: #38bdf8;
+    padding: 0.25rem 0.55rem;
+    border-radius: 999px;
+    margin-bottom: 0.8rem;
+  }
+
+  .card h3 {
+    margin: 0 0 0.4rem;
+    font-size: 1.15rem;
+    color: #e0f2fe;
+  }
+
+  .card p {
+    margin: 0;
+    font-size: 0.92rem;
+    color: #94a3b8;
+    line-height: 1.55;
+  }
+
+  @media (max-width: 768px) {
+    .bento {
+      grid-template-columns: 1fr;
+    }
+
+    .card.wide {
+      grid-column: span 1;
+    }
+  }
+</style>

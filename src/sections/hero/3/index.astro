@@ -1,0 +1,145 @@
+<!--
+  HERO VARIANT 3 — Split con carrusel lateral
+  =============================================
+  Estilo: Layout dividido, copy a la izquierda, carrusel vertical a la derecha.
+
+  ELEMENTOS A SUSTITUIR:
+  ┌─────────────────────────────────────────────────────────┐
+  │ .badge           → Texto corto de categoria/etiqueta    │
+  │ h1               → Titulo principal del hero            │
+  │ .left p          → Parrafo descriptivo de apoyo         │
+  │ .left a          → Texto + href del CTA                 │
+  │ .slides article  → Texto de cada slide del carrusel (x3)│
+  │ .divider         → Decorativo, no requiere sustitucion  │
+  └─────────────────────────────────────────────────────────┘
+-->
+
+<section class="hero-three">
+  <div class="left">
+    <!-- BADGE: Etiqueta superior corta -->
+    <p class="badge">Lorem Ipsum</p>
+
+    <!-- TITULO: Headline principal del hero -->
+    <h1>Dolor sit amet consectetur adipiscing elit</h1>
+
+    <!-- DESCRIPCION: Parrafo de apoyo -->
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore
+      et dolore magna aliqua ut enim ad minim veniam.
+    </p>
+
+    <!-- CTA: Boton de accion -->
+    <a href="#">Lorem Ipsum</a>
+  </div>
+
+  <div class="divider" aria-hidden="true"></div>
+
+  <div class="right">
+    <div class="slides" aria-hidden="true">
+      <!-- SLIDE 1: Texto o contenido del primer slide -->
+      <article>Lorem ipsum dolor sit amet</article>
+      <!-- SLIDE 2: Texto o contenido del segundo slide -->
+      <article>Consectetur adipiscing elit sed</article>
+      <!-- SLIDE 3: Texto o contenido del tercer slide -->
+      <article>Eiusmod tempor incididunt labore</article>
+    </div>
+  </div>
+</section>
+
+<style>
+  .hero-three {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    gap: 1.2rem;
+    align-items: stretch;
+    padding: clamp(2rem, 5vw, 4rem);
+    background: linear-gradient(135deg, #1a0e2e, #1e1145 50%, #0c1a2e);
+    color: #f0e6ff;
+  }
+
+  .left {
+    display: grid;
+    align-content: center;
+    gap: 1rem;
+  }
+
+  .badge {
+    margin: 0;
+    color: #c084fc;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    font-size: 0.78rem;
+  }
+
+  h1 {
+    margin: 0;
+    font-size: clamp(1.8rem, 4vw, 3rem);
+    line-height: 1.1;
+    color: #e9d5ff;
+  }
+
+  .left > p {
+    margin: 0;
+    color: #c4b5fd;
+    max-width: 44ch;
+  }
+
+  .left > a {
+    justify-self: start;
+    text-decoration: none;
+    color: #1e1b4b;
+    background: #c084fc;
+    padding: 0.72rem 1.1rem;
+    border-radius: 999px;
+    font-weight: 600;
+  }
+
+  .divider {
+    width: 2px;
+    background: linear-gradient(#c084fc, #7c3aed, #c084fc);
+    border-radius: 999px;
+  }
+
+  .right {
+    min-height: 270px;
+    overflow: hidden;
+    border-radius: 18px;
+    border: 1px solid rgba(192, 132, 252, 0.3);
+    background: rgba(15, 10, 30, 0.6);
+  }
+
+  .slides {
+    display: grid;
+    height: 300%;
+    animation: carouselY 11s infinite;
+  }
+
+  .slides article {
+    display: grid;
+    place-content: center;
+    font-weight: 700;
+    color: #e9d5ff;
+    background: linear-gradient(135deg, rgba(30, 17, 69, 0.8), rgba(20, 10, 50, 0.9));
+    padding: 1.4rem;
+    text-align: center;
+  }
+
+  @keyframes carouselY {
+    0%, 20% { transform: translateY(0); }
+    33%, 53% { transform: translateY(-33.333%); }
+    66%, 86% { transform: translateY(-66.666%); }
+    100% { transform: translateY(0); }
+  }
+
+  @media (max-width: 860px) {
+    .hero-three {
+      grid-template-columns: 1fr;
+    }
+
+    .divider {
+      height: 2px;
+      width: 100%;
+    }
+  }
+</style>

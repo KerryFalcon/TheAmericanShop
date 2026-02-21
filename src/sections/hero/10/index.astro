@@ -1,0 +1,136 @@
+<!--
+  HERO VARIANT 10 — Minimalista con acento lateral
+  ==================================================
+  Estilo: Ultra limpio, linea de acento vertical izquierda, tipografia serif elegante.
+
+  ELEMENTOS A SUSTITUIR:
+  ┌──────────────────────────────────────────────────────────────┐
+  │ .accent          → Decorativo, cambiar color si necesario    │
+  │ .overline        → Texto corto de categoria/etiqueta         │
+  │ h1               → Titulo principal del hero                 │
+  │ .body            → Parrafo descriptivo de apoyo              │
+  │ .link            → Texto + href del CTA unico                │
+  │ .aside-quote     → Cita o frase destacada lateral            │
+  │ .aside-author    → Autor de la cita                          │
+  └──────────────────────────────────────────────────────────────┘
+-->
+
+<section class="hero-ten">
+  <div class="accent" aria-hidden="true"></div>
+
+  <div class="main">
+    <!-- OVERLINE: Etiqueta superior corta -->
+    <p class="overline">Lorem Ipsum</p>
+
+    <!-- TITULO: Headline principal, tipografia serif -->
+    <h1>Neque porro quisquam est qui dolorem ipsum quia dolor sit amet</h1>
+
+    <!-- DESCRIPCION: Parrafo de apoyo -->
+    <p class="body">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quia non numquam eius modi tempora
+      incidunt ut labore et dolore magnam aliquam quaerat voluptatem.
+    </p>
+
+    <!-- CTA: Link unico con flecha -->
+    <a href="#" class="link">Lorem ipsum dolor &rarr;</a>
+  </div>
+
+  <aside class="side">
+    <!-- CITA: Frase destacada lateral -->
+    <blockquote class="aside-quote">
+      &ldquo;Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam.&rdquo;
+    </blockquote>
+    <!-- AUTOR: Nombre del autor de la cita -->
+    <p class="aside-author">&mdash; Lorem I. Dolor</p>
+  </aside>
+</section>
+
+<style>
+  .hero-ten {
+    display: grid;
+    grid-template-columns: 4px 1.4fr 0.6fr;
+    gap: 2rem;
+    align-items: center;
+    padding: clamp(3rem, 6vw, 5rem);
+    min-height: 420px;
+    background: #08080e;
+    color: #d4d4d8;
+  }
+
+  .accent {
+    align-self: stretch;
+    background: linear-gradient(180deg, #f59e0b, #d97706, #92400e);
+    border-radius: 999px;
+  }
+
+  .overline {
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    font-size: 0.7rem;
+    font-weight: 700;
+    color: #fbbf24;
+  }
+
+  h1 {
+    margin: 0.6rem 0;
+    font-size: clamp(2rem, 4.5vw, 3.4rem);
+    line-height: 1.12;
+    font-family: Georgia, 'Times New Roman', serif;
+    color: #fafafa;
+  }
+
+  .body {
+    margin: 0 0 1.2rem;
+    max-width: 55ch;
+    color: #a1a1aa;
+    line-height: 1.7;
+  }
+
+  .link {
+    text-decoration: none;
+    color: #fbbf24;
+    font-weight: 700;
+    font-size: 1rem;
+    border-bottom: 2px solid transparent;
+    transition: border-color 0.2s;
+  }
+
+  .link:hover {
+    border-color: #fbbf24;
+  }
+
+  .side {
+    padding: 1.5rem;
+    border-left: 1px solid rgba(251, 191, 36, 0.2);
+  }
+
+  .aside-quote {
+    margin: 0;
+    font-style: italic;
+    font-size: 1.05rem;
+    line-height: 1.6;
+    color: #e4e4e7;
+    font-family: Georgia, 'Times New Roman', serif;
+  }
+
+  .aside-author {
+    margin: 0.8rem 0 0;
+    font-size: 0.82rem;
+    color: #fbbf24;
+    font-weight: 600;
+  }
+
+  @media (max-width: 768px) {
+    .hero-ten {
+      grid-template-columns: 4px 1fr;
+    }
+
+    .side {
+      grid-column: 2;
+      border-left: none;
+      border-top: 1px solid rgba(251, 191, 36, 0.2);
+      padding: 1.2rem 0 0;
+    }
+  }
+</style>

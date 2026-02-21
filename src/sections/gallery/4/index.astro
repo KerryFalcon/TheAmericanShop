@@ -1,0 +1,350 @@
+<!--
+  GALLERY VARIANT 4 — Carrusel de imagenes con navegacion
+  ==========================================================
+  Estilo: Carrusel fullwidth con imagenes reales, botones prev/next,
+  indicadores de posicion, y autoplay. Funcional con JS vanilla.
+
+  ELEMENTOS A SUSTITUIR:
+  ┌──────────────────────────────────────────────────────────────┐
+  │ .eyebrow         → Texto corto de categoria/etiqueta         │
+  │ h2               → Titulo principal de la seccion             │
+  │ .intro           → Parrafo descriptivo de apoyo              │
+  │ .slide img       → Cambiar src y alt de cada imagen (x5)     │
+  │ .slide .caption  → Titulo de cada imagen (x5)                │
+  │ .slide .desc     → Descripcion de cada imagen (x5)           │
+  │                    Agregar o quitar slides segun necesidad    │
+  │ NOTA: Si agregas/quitas slides, actualiza el JS (totalSlides)│
+  └──────────────────────────────────────────────────────────────┘
+-->
+
+<section class="gallery-carousel">
+  <div class="header">
+    <!-- EYEBROW: Etiqueta superior corta -->
+    <p class="eyebrow">Lorem Ipsum</p>
+    <!-- TITULO: Headline principal -->
+    <h2>Inventore veritatis et quasi architecto beatae vitae</h2>
+    <!-- INTRO: Parrafo de apoyo -->
+    <p class="intro">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore.</p>
+  </div>
+
+  <div class="carousel" id="img-carousel">
+    <div class="track" id="carousel-track">
+      <!-- SLIDE 1: Imagen + caption -->
+      <div class="slide">
+        <img
+          src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&w=1200&q=80"
+          alt="Lorem ipsum paisaje montañas"
+          loading="lazy"
+        />
+        <div class="slide-overlay">
+          <h3 class="caption">Lorem Ipsum Dolor</h3>
+          <p class="desc">Consectetur adipiscing elit sed do eiusmod tempor incididunt.</p>
+        </div>
+      </div>
+
+      <!-- SLIDE 2: Imagen + caption -->
+      <div class="slide">
+        <img
+          src="https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?auto=format&fit=crop&w=1200&q=80"
+          alt="Lorem ipsum bosque verde"
+          loading="lazy"
+        />
+        <div class="slide-overlay">
+          <h3 class="caption">Amet Consectetur</h3>
+          <p class="desc">Ut enim ad minim veniam quis nostrud exercitation ullamco.</p>
+        </div>
+      </div>
+
+      <!-- SLIDE 3: Imagen + caption -->
+      <div class="slide">
+        <img
+          src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=1200&q=80"
+          alt="Lorem ipsum bosque luz"
+          loading="lazy"
+        />
+        <div class="slide-overlay">
+          <h3 class="caption">Adipiscing Elit Sed</h3>
+          <p class="desc">Duis aute irure dolor in reprehenderit in voluptate velit esse.</p>
+        </div>
+      </div>
+
+      <!-- SLIDE 4: Imagen + caption -->
+      <div class="slide">
+        <img
+          src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80"
+          alt="Lorem ipsum tecnologia"
+          loading="lazy"
+        />
+        <div class="slide-overlay">
+          <h3 class="caption">Eiusmod Tempor</h3>
+          <p class="desc">Excepteur sint occaecat cupidatat non proident sunt in culpa.</p>
+        </div>
+      </div>
+
+      <!-- SLIDE 5: Imagen + caption -->
+      <div class="slide">
+        <img
+          src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80"
+          alt="Lorem ipsum playa oceano"
+          loading="lazy"
+        />
+        <div class="slide-overlay">
+          <h3 class="caption">Incididunt Labore</h3>
+          <p class="desc">Nemo enim ipsam voluptatem quia voluptas sit aspernatur.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- CONTROLES: Botones prev/next -->
+    <button class="nav-btn prev" id="carousel-prev" aria-label="Imagen anterior">&#8249;</button>
+    <button class="nav-btn next" id="carousel-next" aria-label="Imagen siguiente">&#8250;</button>
+
+    <!-- INDICADORES: Puntos de posicion -->
+    <div class="dots" id="carousel-dots">
+      <button class="dot active" data-index="0" aria-label="Ir a imagen 1"></button>
+      <button class="dot" data-index="1" aria-label="Ir a imagen 2"></button>
+      <button class="dot" data-index="2" aria-label="Ir a imagen 3"></button>
+      <button class="dot" data-index="3" aria-label="Ir a imagen 4"></button>
+      <button class="dot" data-index="4" aria-label="Ir a imagen 5"></button>
+    </div>
+  </div>
+</section>
+
+<style>
+  .gallery-carousel {
+    padding: clamp(3rem, 6vw, 5rem) 0;
+    background: linear-gradient(180deg, #0a0a12 0%, #111827 100%);
+    color: #e2e8f0;
+  }
+
+  .header {
+    max-width: 650px;
+    margin-bottom: 2rem;
+    padding: 0 clamp(1.5rem, 4vw, 3rem);
+  }
+
+  .eyebrow {
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    font-size: 0.78rem;
+    font-weight: 700;
+    color: #f59e0b;
+  }
+
+  h2 {
+    margin: 0.4rem 0;
+    font-size: clamp(1.8rem, 4vw, 2.8rem);
+    line-height: 1.1;
+    color: #f1f5f9;
+  }
+
+  .intro {
+    margin: 0;
+    color: #94a3b8;
+  }
+
+  /* ── Carrusel ─────────────────────────────── */
+
+  .carousel {
+    position: relative;
+    overflow: hidden;
+    margin: 0 clamp(1.5rem, 4vw, 3rem);
+    border-radius: 20px;
+    border: 1px solid rgba(245, 158, 11, 0.15);
+  }
+
+  .track {
+    display: flex;
+    transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    will-change: transform;
+  }
+
+  .slide {
+    min-width: 100%;
+    position: relative;
+    aspect-ratio: 16/7;
+    overflow: hidden;
+  }
+
+  .slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  .slide-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 2rem clamp(1.2rem, 3vw, 2rem);
+    background: linear-gradient(transparent 0%, rgba(10, 10, 18, 0.85) 100%);
+  }
+
+  .caption {
+    margin: 0;
+    font-size: clamp(1.2rem, 2.5vw, 1.6rem);
+    font-weight: 700;
+    color: #fef3c7;
+  }
+
+  .desc {
+    margin: 0.3rem 0 0;
+    font-size: 0.9rem;
+    color: #d4d4d8;
+    max-width: 50ch;
+  }
+
+  /* ── Botones prev/next ────────────────────── */
+
+  .nav-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    border: 1px solid rgba(245, 158, 11, 0.3);
+    background: rgba(10, 10, 18, 0.7);
+    backdrop-filter: blur(4px);
+    color: #fbbf24;
+    font-size: 1.6rem;
+    cursor: pointer;
+    display: grid;
+    place-content: center;
+    transition: background 0.2s, border-color 0.2s;
+    z-index: 3;
+    font-family: inherit;
+    line-height: 1;
+    padding: 0;
+  }
+
+  .nav-btn:hover {
+    background: rgba(245, 158, 11, 0.2);
+    border-color: #f59e0b;
+  }
+
+  .prev { left: 1rem; }
+  .next { right: 1rem; }
+
+  /* ── Indicadores (dots) ───────────────────── */
+
+  .dots {
+    position: absolute;
+    bottom: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 0.5rem;
+    z-index: 3;
+  }
+
+  .dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    border: 1px solid rgba(251, 191, 36, 0.5);
+    background: rgba(10, 10, 18, 0.5);
+    cursor: pointer;
+    padding: 0;
+    transition: background 0.2s, transform 0.2s;
+  }
+
+  .dot.active {
+    background: #fbbf24;
+    transform: scale(1.25);
+  }
+
+  /* ── Responsive ───────────────────────────── */
+
+  @media (max-width: 640px) {
+    .slide {
+      aspect-ratio: 4/3;
+    }
+
+    .nav-btn {
+      width: 36px;
+      height: 36px;
+      font-size: 1.2rem;
+    }
+  }
+</style>
+
+<script>
+  const track = document.getElementById('carousel-track') as HTMLElement;
+  const dots = document.querySelectorAll<HTMLButtonElement>('#carousel-dots .dot');
+  const prevBtn = document.getElementById('carousel-prev') as HTMLButtonElement;
+  const nextBtn = document.getElementById('carousel-next') as HTMLButtonElement;
+
+  const totalSlides = 5;
+  let current = 0;
+  let autoplayTimer: ReturnType<typeof setInterval>;
+
+  function goTo(index: number): void {
+    current = ((index % totalSlides) + totalSlides) % totalSlides;
+    track.style.transform = `translateX(-${current * 100}%)`;
+
+    dots.forEach((dot, i) => {
+      dot.classList.toggle('active', i === current);
+    });
+  }
+
+  function startAutoplay(): void {
+    stopAutoplay();
+    autoplayTimer = setInterval(() => goTo(current + 1), 5000);
+  }
+
+  function stopAutoplay(): void {
+    clearInterval(autoplayTimer);
+  }
+
+  prevBtn.addEventListener('click', () => {
+    goTo(current - 1);
+    startAutoplay();
+  });
+
+  nextBtn.addEventListener('click', () => {
+    goTo(current + 1);
+    startAutoplay();
+  });
+
+  dots.forEach((dot) => {
+    dot.addEventListener('click', () => {
+      const index = Number(dot.dataset.index);
+      goTo(index);
+      startAutoplay();
+    });
+  });
+
+  // Pausar autoplay al hacer hover
+  const carousel = document.getElementById('img-carousel') as HTMLElement;
+  carousel.addEventListener('mouseenter', stopAutoplay);
+  carousel.addEventListener('mouseleave', startAutoplay);
+
+  // Soporte para swipe en móvil
+  let touchStartX = 0;
+  carousel.addEventListener('touchstart', (e) => {
+    touchStartX = e.touches[0].clientX;
+    stopAutoplay();
+  }, { passive: true });
+
+  carousel.addEventListener('touchend', (e) => {
+    const diff = touchStartX - e.changedTouches[0].clientX;
+    if (Math.abs(diff) > 50) {
+      goTo(diff > 0 ? current + 1 : current - 1);
+    }
+    startAutoplay();
+  }, { passive: true });
+
+  // Soporte para teclado
+  carousel.setAttribute('tabindex', '0');
+  carousel.addEventListener('keydown', (e) => {
+    if (e.key === 'ArrowLeft') { goTo(current - 1); startAutoplay(); }
+    if (e.key === 'ArrowRight') { goTo(current + 1); startAutoplay(); }
+  });
+
+  // Iniciar autoplay
+  startAutoplay();
+</script>

@@ -1,0 +1,176 @@
+<!--
+  HERO VARIANT 2 — Data Driven con panel lateral
+  ================================================
+  Estilo: Grid overlay violeta, layout 2 columnas con panel de datos.
+
+  ELEMENTOS A SUSTITUIR:
+  ┌─────────────────────────────────────────────────────────┐
+  │ .label           → Texto corto de categoria/etiqueta    │
+  │ h1               → Titulo principal del hero            │
+  │ .copy p          → Parrafo descriptivo de apoyo         │
+  │ .primary         → Texto + href del CTA principal       │
+  │ .secondary       → Texto + href del CTA secundario      │
+  │ .panel h2        → Titulo del panel lateral             │
+  │ .panel span      → Cifra/dato destacado (x3)            │
+  │ .panel small     → Descripcion de cada dato (x3)        │
+  │ .grid-overlay    → Decorativo, no requiere sustitucion  │
+  └─────────────────────────────────────────────────────────┘
+-->
+
+<section class="hero-two">
+  <div class="grid-overlay" aria-hidden="true"></div>
+
+  <div class="copy">
+    <!-- LABEL: Etiqueta superior corta -->
+    <p class="label">Lorem Ipsum</p>
+
+    <!-- TITULO: Headline principal del hero -->
+    <h1>Consectetur adipiscing elit sed do eiusmod tempor incididunt</h1>
+
+    <!-- DESCRIPCION: Parrafo de apoyo -->
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore
+      et dolore magna aliqua. Ut enim ad minim veniam quis nostrud exercitation.
+    </p>
+
+    <div class="buttons">
+      <!-- CTA PRINCIPAL -->
+      <a href="#" class="primary">Lorem Ipsum</a>
+      <!-- CTA SECUNDARIO -->
+      <a href="#" class="secondary">Dolor Amet</a>
+    </div>
+  </div>
+
+  <!-- PANEL LATERAL: Bloque de datos/metricas -->
+  <aside class="panel" aria-label="Panel de resultados">
+    <!-- TITULO PANEL -->
+    <h2>Lorem de Ipsum</h2>
+    <ul>
+      <!-- METRICA 1: Cifra + descripcion -->
+      <li><span>32%</span><small>Lorem ipsum dolor sit</small></li>
+      <!-- METRICA 2: Cifra + descripcion -->
+      <li><span>19</span><small>Consectetur adipiscing</small></li>
+      <!-- METRICA 3: Cifra + descripcion -->
+      <li><span>4.8/5</span><small>Sed do eiusmod tempor</small></li>
+    </ul>
+  </aside>
+</section>
+
+<style>
+  .hero-two {
+    position: relative;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 1.2rem;
+    align-items: center;
+    padding: clamp(2rem, 5vw, 4.5rem);
+    background: linear-gradient(135deg, #0b1020, #1d1736 45%, #052e2b 100%);
+    color: #f5f3ff;
+  }
+
+  .grid-overlay {
+    position: absolute;
+    inset: 0;
+    background-image: linear-gradient(rgba(167, 139, 250, 0.13) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(167, 139, 250, 0.13) 1px, transparent 1px);
+    background-size: 36px 36px;
+    pointer-events: none;
+    opacity: 0.55;
+  }
+
+  .copy,
+  .panel {
+    position: relative;
+    z-index: 2;
+  }
+
+  .label {
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    font-size: 0.76rem;
+    font-weight: 700;
+    color: #c4b5fd;
+  }
+
+  h1 {
+    margin: 0.5rem 0;
+    line-height: 1.08;
+    font-size: clamp(1.9rem, 4.7vw, 3.5rem);
+  }
+
+  .copy p {
+    margin: 0;
+    color: #ddd6fe;
+    max-width: 60ch;
+  }
+
+  .buttons {
+    margin-top: 1.2rem;
+    display: flex;
+    gap: 0.8rem;
+    flex-wrap: wrap;
+  }
+
+  .buttons a {
+    text-decoration: none;
+    font-weight: 700;
+    padding: 0.72rem 1.06rem;
+    border-radius: 999px;
+  }
+
+  .primary {
+    color: #1e1b4b;
+    background: #ddd6fe;
+  }
+
+  .secondary {
+    color: #f5f3ff;
+    border: 1px solid rgba(221, 214, 254, 0.55);
+  }
+
+  .panel {
+    background: rgba(7, 10, 24, 0.74);
+    border: 1px solid rgba(196, 181, 253, 0.4);
+    border-radius: 18px;
+    padding: 1rem;
+  }
+
+  .panel h2 {
+    margin: 0;
+    font-size: 1.05rem;
+    color: #ddd6fe;
+  }
+
+  .panel ul {
+    list-style: none;
+    margin: 0.9rem 0 0;
+    padding: 0;
+    display: grid;
+    gap: 0.7rem;
+  }
+
+  .panel li {
+    border: 1px solid rgba(167, 139, 250, 0.28);
+    border-radius: 12px;
+    padding: 0.65rem;
+    background: rgba(76, 29, 149, 0.18);
+  }
+
+  .panel span {
+    display: block;
+    font-weight: 700;
+    color: #e9d5ff;
+  }
+
+  .panel small {
+    color: #c4b5fd;
+  }
+
+  @media (max-width: 920px) {
+    .hero-two {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

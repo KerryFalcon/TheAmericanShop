@@ -1,0 +1,135 @@
+<!--
+  FEATURES VARIANT 2 — Zigzag alternado
+  ========================================
+  Estilo: Bloques de feature alternados izquierda/derecha con imagen placeholder.
+
+  ELEMENTOS A SUSTITUIR:
+  ┌──────────────────────────────────────────────────────────────┐
+  │ .eyebrow         → Texto corto de categoria/etiqueta         │
+  │ h2               → Titulo principal de la seccion             │
+  │ .row h3          → Titulo de cada feature (x3)                │
+  │ .row p           → Descripcion de cada feature (x3)           │
+  │ .row a           → Texto + href del CTA de cada feature (x3)  │
+  │ .img-placeholder → Sustituir por <img> real o cambiar fondo  │
+  └──────────────────────────────────────────────────────────────┘
+-->
+
+<section class="features-two">
+  <div class="header">
+    <!-- EYEBROW: Etiqueta superior corta -->
+    <p class="eyebrow">Lorem Ipsum</p>
+    <!-- TITULO: Headline principal -->
+    <h2>Nemo enim ipsam voluptatem quia voluptas sit aspernatur</h2>
+  </div>
+
+  <!-- ROW 1: Feature izquierda, imagen derecha -->
+  <div class="row">
+    <div class="text">
+      <h3>Lorem Ipsum Dolor Sit</h3>
+      <p>Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+      <a href="#">Lorem &rarr;</a>
+    </div>
+    <!-- IMAGEN: Sustituir por <img> o cambiar background -->
+    <div class="img-placeholder" aria-label="Imagen de feature 1"></div>
+  </div>
+
+  <!-- ROW 2: Imagen izquierda, feature derecha (invertido) -->
+  <div class="row reverse">
+    <div class="text">
+      <h3>Amet Consectetur Adipiscing</h3>
+      <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+      <a href="#">Ipsum &rarr;</a>
+    </div>
+    <div class="img-placeholder" aria-label="Imagen de feature 2"></div>
+  </div>
+
+  <!-- ROW 3: Feature izquierda, imagen derecha -->
+  <div class="row">
+    <div class="text">
+      <h3>Sed Do Eiusmod Tempor</h3>
+      <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      <a href="#">Dolor &rarr;</a>
+    </div>
+    <div class="img-placeholder" aria-label="Imagen de feature 3"></div>
+  </div>
+</section>
+
+<style>
+  .features-two {
+    padding: clamp(3rem, 6vw, 5rem);
+    background: #0b0b14;
+    color: #e2e8f0;
+  }
+
+  .header {
+    max-width: 650px;
+    margin-bottom: 3rem;
+  }
+
+  .eyebrow {
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    font-size: 0.78rem;
+    font-weight: 700;
+    color: #34d399;
+  }
+
+  h2 {
+    margin: 0.4rem 0 0;
+    font-size: clamp(1.8rem, 4vw, 2.8rem);
+    line-height: 1.1;
+    color: #f1f5f9;
+  }
+
+  .row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    align-items: center;
+    margin-bottom: 2.5rem;
+  }
+
+  .row.reverse {
+    direction: rtl;
+  }
+
+  .row.reverse > * {
+    direction: ltr;
+  }
+
+  .text h3 {
+    margin: 0 0 0.5rem;
+    font-size: 1.3rem;
+    color: #f1f5f9;
+  }
+
+  .text p {
+    margin: 0 0 0.8rem;
+    color: #94a3b8;
+    line-height: 1.6;
+  }
+
+  .text a {
+    text-decoration: none;
+    color: #34d399;
+    font-weight: 700;
+    font-size: 0.92rem;
+  }
+
+  .img-placeholder {
+    width: 100%;
+    aspect-ratio: 16/10;
+    border-radius: 16px;
+    background: linear-gradient(135deg, rgba(52, 211, 153, 0.15), rgba(16, 185, 129, 0.05));
+    border: 1px solid rgba(52, 211, 153, 0.2);
+  }
+
+  @media (max-width: 768px) {
+    .row,
+    .row.reverse {
+      grid-template-columns: 1fr;
+      direction: ltr;
+    }
+  }
+</style>

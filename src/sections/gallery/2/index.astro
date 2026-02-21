@@ -1,0 +1,154 @@
+<!--
+  GALLERY VARIANT 2 — Carrusel horizontal con scroll snap
+  ==========================================================
+  Estilo: Carrusel horizontal con scroll snap, tarjetas grandes con overlay de texto.
+
+  ELEMENTOS A SUSTITUIR:
+  ┌──────────────────────────────────────────────────────────────┐
+  │ .eyebrow         → Texto corto de categoria/etiqueta         │
+  │ h2               → Titulo principal de la seccion             │
+  │ .card            → Sustituir fondo por <img> real (x6)       │
+  │ .card h3         → Titulo de cada imagen (x6)                │
+  │ .card p          → Descripcion de cada imagen (x6)           │
+  │                    Agregar o quitar cards segun necesidad     │
+  └──────────────────────────────────────────────────────────────┘
+-->
+
+<section class="gallery-two">
+  <div class="header">
+    <!-- EYEBROW: Etiqueta superior corta -->
+    <p class="eyebrow">Lorem Ipsum</p>
+    <!-- TITULO: Headline principal -->
+    <h2>At vero eos et accusamus et iusto odio dignissimos</h2>
+  </div>
+
+  <!-- CARRUSEL: Scroll horizontal con snap -->
+  <div class="carousel">
+    <div class="card">
+      <div class="overlay">
+        <h3>Lorem Ipsum</h3>
+        <p>Dolor sit amet consectetur</p>
+      </div>
+    </div>
+    <div class="card">
+      <div class="overlay">
+        <h3>Adipiscing Elit</h3>
+        <p>Sed do eiusmod tempor</p>
+      </div>
+    </div>
+    <div class="card">
+      <div class="overlay">
+        <h3>Incididunt Labore</h3>
+        <p>Ut enim ad minim veniam</p>
+      </div>
+    </div>
+    <div class="card">
+      <div class="overlay">
+        <h3>Dolore Magna</h3>
+        <p>Quis nostrud exercitation</p>
+      </div>
+    </div>
+    <div class="card">
+      <div class="overlay">
+        <h3>Ullamco Laboris</h3>
+        <p>Duis aute irure dolor</p>
+      </div>
+    </div>
+    <div class="card">
+      <div class="overlay">
+        <h3>Fugiat Nulla</h3>
+        <p>Excepteur sint occaecat</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .gallery-two {
+    padding: clamp(3rem, 6vw, 5rem) 0;
+    background: linear-gradient(180deg, #0f172a 0%, #0a0a12 100%);
+    color: #e2e8f0;
+  }
+
+  .header {
+    max-width: 600px;
+    margin-bottom: 2rem;
+    padding: 0 clamp(1.5rem, 4vw, 3rem);
+  }
+
+  .eyebrow {
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    font-size: 0.78rem;
+    font-weight: 700;
+    color: #2dd4bf;
+  }
+
+  h2 {
+    margin: 0.4rem 0 0;
+    font-size: clamp(1.8rem, 4vw, 2.8rem);
+    line-height: 1.1;
+    color: #f1f5f9;
+  }
+
+  .carousel {
+    display: flex;
+    gap: 1rem;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    padding: 0 clamp(1.5rem, 4vw, 3rem);
+    scrollbar-width: thin;
+    scrollbar-color: rgba(45, 212, 191, 0.3) transparent;
+  }
+
+  .carousel::-webkit-scrollbar {
+    height: 6px;
+  }
+
+  .carousel::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  .carousel::-webkit-scrollbar-thumb {
+    background: rgba(45, 212, 191, 0.3);
+    border-radius: 999px;
+  }
+
+  .card {
+    flex: 0 0 320px;
+    height: 400px;
+    border-radius: 18px;
+    overflow: hidden;
+    position: relative;
+    scroll-snap-align: start;
+    background: linear-gradient(135deg, rgba(45, 212, 191, 0.1), rgba(20, 184, 166, 0.05));
+    border: 1px solid rgba(45, 212, 191, 0.15);
+    transition: transform 0.25s;
+  }
+
+  .card:hover {
+    transform: scale(1.02);
+  }
+
+  .overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 1.5rem;
+    background: linear-gradient(transparent, rgba(10, 10, 18, 0.9));
+  }
+
+  .overlay h3 {
+    margin: 0;
+    font-size: 1.15rem;
+    color: #ccfbf1;
+  }
+
+  .overlay p {
+    margin: 0.2rem 0 0;
+    font-size: 0.85rem;
+    color: #5eead4;
+  }
+</style>

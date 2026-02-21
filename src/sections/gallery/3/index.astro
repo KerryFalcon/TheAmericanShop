@@ -1,0 +1,150 @@
+<!--
+  GALLERY VARIANT 3 — Grid con filtros/tabs
+  ============================================
+  Estilo: Galeria con tabs de categoria arriba y grid uniforme abajo.
+
+  ELEMENTOS A SUSTITUIR:
+  ┌──────────────────────────────────────────────────────────────┐
+  │ .eyebrow         → Texto corto de categoria/etiqueta         │
+  │ h2               → Titulo principal de la seccion             │
+  │ .tabs button     → Texto de cada tab/filtro (x4)              │
+  │ .item            → Sustituir fondo por <img> real (x9)       │
+  │ .item span       → Etiqueta/titulo de cada imagen (x9)       │
+  │                    Agregar o quitar items segun necesidad     │
+  └──────────────────────────────────────────────────────────────┘
+-->
+
+<section class="gallery-three">
+  <div class="header">
+    <!-- EYEBROW: Etiqueta superior corta -->
+    <p class="eyebrow">Lorem Ipsum</p>
+    <!-- TITULO: Headline principal -->
+    <h2>Nemo enim ipsam voluptatem quia voluptas</h2>
+  </div>
+
+  <!-- TABS: Filtros de categoria (decorativos, agregar JS para funcionalidad) -->
+  <div class="tabs">
+    <button class="active">Lorem</button>
+    <button>Ipsum</button>
+    <button>Dolor</button>
+    <button>Amet</button>
+  </div>
+
+  <!-- GRID: Imagenes uniformes con etiqueta hover -->
+  <div class="grid">
+    <div class="item"><span>Lorem Ipsum</span></div>
+    <div class="item"><span>Dolor Sit</span></div>
+    <div class="item"><span>Amet Elit</span></div>
+    <div class="item"><span>Consectetur</span></div>
+    <div class="item"><span>Adipiscing</span></div>
+    <div class="item"><span>Eiusmod</span></div>
+    <div class="item"><span>Tempor</span></div>
+    <div class="item"><span>Incididunt</span></div>
+    <div class="item"><span>Labore</span></div>
+  </div>
+</section>
+
+<style>
+  .gallery-three {
+    padding: clamp(3rem, 6vw, 5rem);
+    background: linear-gradient(180deg, #0a0a12 0%, #1a0e2e 100%);
+    color: #e2e8f0;
+  }
+
+  .header {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto 1.5rem;
+  }
+
+  .eyebrow {
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    font-size: 0.78rem;
+    font-weight: 700;
+    color: #f472b6;
+  }
+
+  h2 {
+    margin: 0.4rem 0 0;
+    font-size: clamp(1.8rem, 4vw, 2.8rem);
+    line-height: 1.1;
+    color: #f1f5f9;
+  }
+
+  .tabs {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+  }
+
+  .tabs button {
+    background: rgba(244, 114, 182, 0.08);
+    border: 1px solid rgba(244, 114, 182, 0.2);
+    color: #f9a8d4;
+    padding: 0.5rem 1.1rem;
+    border-radius: 999px;
+    font-weight: 600;
+    font-size: 0.85rem;
+    cursor: pointer;
+    font-family: inherit;
+    transition: background 0.2s, border-color 0.2s;
+  }
+
+  .tabs button.active,
+  .tabs button:hover {
+    background: #f472b6;
+    color: #1a0e2e;
+    border-color: #f472b6;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.75rem;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+
+  .item {
+    position: relative;
+    aspect-ratio: 1;
+    border-radius: 16px;
+    overflow: hidden;
+    background: linear-gradient(135deg, rgba(244, 114, 182, 0.1), rgba(219, 39, 119, 0.05));
+    border: 1px solid rgba(244, 114, 182, 0.12);
+    cursor: pointer;
+    transition: transform 0.25s, border-color 0.25s;
+  }
+
+  .item:hover {
+    transform: scale(1.03);
+    border-color: rgba(244, 114, 182, 0.45);
+  }
+
+  .item span {
+    position: absolute;
+    inset: 0;
+    display: grid;
+    place-content: center;
+    font-weight: 700;
+    font-size: 0.9rem;
+    color: #fce7f3;
+    background: rgba(26, 14, 46, 0.6);
+    opacity: 0;
+    transition: opacity 0.25s;
+  }
+
+  .item:hover span {
+    opacity: 1;
+  }
+
+  @media (max-width: 640px) {
+    .grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+</style>

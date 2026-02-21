@@ -1,0 +1,21 @@
+---
+import { sections } from "../section-registry";
+
+/*
+  Composer nunca conoce secciones concretas (hero, features, etc.).
+  Solo conoce el contrato "array de componentes" expuesto por el registry.
+
+  Esto desacopla el render de la estructura del sitio y permite que el CLI
+  controle completamente la página regenerando wrappers + registry.
+
+  En dev, al cambiar archivos generados (section-registry.ts y active-sections/*),
+  Astro detecta cambios de imports estáticos y recarga automáticamente.
+*/
+const hasSections = sections.length > 0;
+---
+
+{hasSections ? (
+  sections.map((Component) => <Component />)
+) : (
+  <p>No hay secciones activas. Usa Landmaker para construir la página.</p>
+)}

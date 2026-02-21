@@ -1,0 +1,16 @@
+{
+  "pages": {
+    "home": [
+      {
+        "type": "hero",
+        "variant": 1,
+        "theme": "default"
+      },
+      {
+        "type": "hero",
+        "variant": 5,
+        "theme": "default"
+      }
+    ]
+  }
+}
