@@ -4,8 +4,8 @@ import './ProductPanel.css';
 
 const products = [
   { name: 'Doritos USA', category: 'Chips', image: '/doritos.webp', accent: '#ff2fb3', note: 'Crunch intenso' },
-  { name: "Cheetos Flamin' Hot", category: 'Hot', image: "/Cheetos Crunchy Flamin' Hot_1.png", accent: '#ff4d2f', note: 'Picante favorito' },
-  { name: 'Mountain Dew', category: 'Bebidas', image: '/Mountain-Dew.webp', accent: '#00d8ff', note: 'Importada' },
+  { name: "Cheetos Flamin' Hot", category: 'Hot', image: '/cheetos-crunchy-flamin-hot.png', accent: '#ff4d2f', note: 'Picante favorito' },
+  { name: 'Mountain Dew', category: 'Bebidas', image: '/mountain-dew.webp', accent: '#00d8ff', note: 'Importada' },
   { name: 'Nerds Rainbow', category: 'Dulces', image: '/nerds_rainbow.webp', accent: '#ff7ad6', note: 'Color y azucar' },
   { name: "Cap'n Crunch", category: 'Cereal', image: '/captaincrunch.png', accent: '#f9f871', note: 'Caja clasica' },
   { name: 'Twix', category: 'Chocolate', image: '/twix.webp', accent: '#d7a06b', note: 'Caramelo' },
