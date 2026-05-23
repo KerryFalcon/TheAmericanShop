@@ -224,6 +224,14 @@
   transform: rotate(-3deg);
 }
 
+.tas-product-img.is-mountain-dew {
+  max-width: 88px;
+  max-height: 108px;
+  object-fit: contain;
+  object-position: center;
+  transform: rotate(2deg);
+}
+
 .tas-product-copy {
   position: relative;
   z-index: 1;
@@ -325,6 +333,11 @@
   .tas-product-img {
     max-width: 78px;
     max-height: 78px;
+  }
+
+  .tas-product-img.is-mountain-dew {
+    max-width: 74px;
+    max-height: 92px;
   }
 
   .tas-product-copy strong {

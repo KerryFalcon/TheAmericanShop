@@ -35,7 +35,7 @@
       <img class="logo-neon" src="/TheAmericanShopQro.jpg" alt="The American Shop QRO" />
       <!-- Floating products -->
       <div class="float-product fp1" aria-hidden="true"><img src="/doritos.webp" alt="" /></div>
-      <div class="float-product fp2" aria-hidden="true"><img src="/mountain-dew.webp" alt="" /></div>
+      <div class="float-product fp2 mountain-dew-float" aria-hidden="true"><img src="/Mountain-Dew.webp" alt="" /></div>
       <div class="float-product fp3" aria-hidden="true"><img src="/nerds_rainbow.webp" alt="" /></div>
       <div class="float-product fp4" aria-hidden="true"><img src="/twix.webp" alt="" /></div>
       <div class="float-product fp5" aria-hidden="true"><img src="/captaincrunch.png" alt="" /></div>
@@ -258,6 +258,17 @@
     transform: rotate(3deg);
   }
 
+  .mountain-dew-float {
+    z-index: 5 !important;
+  }
+
+  .mountain-dew-float img {
+    width: 78px !important;
+    max-height: 92px !important;
+    object-fit: contain !important;
+    object-position: center !important;
+  }
+
   /* === Metrics === */
   .metrics {
     margin: 3rem auto 0;
@@ -353,6 +364,10 @@
     .float-product img {
       width: clamp(34px, 8.5vw, 46px) !important;
     }
+    .mountain-dew-float img {
+      width: clamp(40px, 9.5vw, 54px) !important;
+      max-height: 62px !important;
+    }
     .metrics {
       grid-template-columns: repeat(3, minmax(0, 1fr));
       gap: 0.55rem;
@@ -405,6 +420,10 @@
     }
     .float-product img {
       width: 34px !important;
+    }
+    .mountain-dew-float img {
+      width: 40px !important;
+      max-height: 48px !important;
     }
     .metrics {
       max-width: 300px;
