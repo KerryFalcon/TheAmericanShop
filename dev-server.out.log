@@ -1,0 +1,121 @@
+
+> landmaker@0.0.1 dev
+> astro dev --host 127.0.0.1
+
+[2m21:38:25[22m [34m[types][39m Generated [2m1ms[22m
+[2m21:38:25[22m [34m[content][39m Syncing content
+[2m21:38:25[22m [34m[content][39m Synced content
+[2m21:38:25[22m [34m[vite][39m Port 4321 is in use, trying another one...
+
+[42m[1m astro [22m[49m [32mv5.17.2[39m [2mready in[22m 219 [2mms[22m
+
+[2m┃[22m Local    [36mhttp://127.0.0.1:4322/[39m
+
+[2m21:38:25[22m [32mwatching for file changes...[39m
+[2m21:38:50[22m [34m[200][39m / [2m61ms[22m
+[2m21:38:50[22m [33m[404][39m /ivy vine 3.png [2m3ms[22m
+[2m21:38:50[22m [33m[404][39m /ivy vine 3.png [2m1ms[22m
+[2m21:38:50[22m [33m[404][39m /ivy vine 3.png [2m2ms[22m
+[2m21:38:50[22m [33m[404][39m /ivy vine 3.png [2m1ms[22m
+[2m21:38:50[22m [33m[404][39m /ivy vine 3.png [2m1ms[22m
+[2m21:38:50[22m [33m[404][39m /ivy vine 3.png [2m1ms[22m
+[2m22:09:09[22m [34m[watch][39m /src/sections/hero/1/index.astro?astro&type=style&index=0&lang.css
+[2m22:09:09[22m [34m[200][39m / [2m12ms[22m
+[2m22:09:09[22m [33m[404][39m /ivy vine 3.png [2m2ms[22m
+[2m22:09:10[22m [33m[404][39m /ivy vine 3.png [2m1ms[22m
+[2m22:09:10[22m [33m[404][39m /ivy vine 3.png [2m1ms[22m
+[2m22:09:10[22m [33m[404][39m /ivy vine 3.png [2m1ms[22m
+[2m22:09:10[22m [33m[404][39m /ivy vine 3.png [2m1ms[22m
+[2m22:10:17[22m [34m[watch][39m /src/sections/hero/1/index.astro?astro&type=style&index=0&lang.css
+[2m22:10:17[22m [34m[200][39m / [2m6ms[22m
+[2m22:11:58[22m [34m[200][39m / [2m6ms[22m
+[2m22:18:20[22m [34m[watch][39m /src/sections/hero/1/index.astro?astro&type=style&index=0&lang.css
+[2m22:18:21[22m [34m[200][39m / [2m4ms[22m
+[2m22:36:32[22m [34m[200][39m / [2m8ms[22m
+[2m22:37:05[22m [34m[200][39m / [2m6ms[22m
+[2m22:39:05[22m [34m[watch][39m /src/sections/hero/1/index.astro?astro&type=style&index=0&lang.css
+[2m22:39:05[22m [34m[200][39m / [2m8ms[22m
+[2m22:39:05[22m [34m[200][39m / [2m7ms[22m
+[2m22:39:22[22m [34m[watch][39m /src/sections/hero/1/index.astro?astro&type=style&index=0&lang.css
+[2m22:39:22[22m [34m[watch][39m src/sections/hero/1/index.astro
+[2m22:47:46[22m [34m[watch][39m /src/sections/hero/1/index.astro?astro&type=style&index=0&lang.css
+[2m22:47:46[22m [34m[watch][39m src/sections/hero/1/index.astro
+[2m22:50:23[22m [34m[watch][39m /src/sections/hero/1/index.astro?astro&type=style&index=0&lang.css
+[2m22:50:23[22m [34m[watch][39m src/sections/hero/1/index.astro
+[2m22:51:03[22m [34m[200][39m / [2m9ms[22m
+[2m22:51:53[22m [34m[watch][39m /src/sections/hero/1/index.astro?astro&type=style&index=0&lang.css
+[2m22:51:53[22m [34m[watch][39m src/sections/hero/1/index.astro
+[2m22:56:21[22m [34m[watch][39m /src/layouts/Layout.astro?astro&type=style&index=0&lang.css
+[2m22:56:21[22m [34m[watch][39m src/layouts/Layout.astro
+[2m22:59:10[22m [34m[200][39m / [2m23ms[22m
+[2m23:00:46[22m [34m[watch][39m /src/layouts/Layout.astro?astro&type=style&index=0&lang.css
+[2m23:00:46[22m [34m[watch][39m src/layouts/Layout.astro
+[2m23:04:22[22m [34m[watch][39m src/layouts/Layout.astro
+[2m23:04:23[22m [34m[200][39m / [2m10ms[22m
+[2m23:04:31[22m [34m[watch][39m /src/layouts/Layout.astro?astro&type=style&index=0&lang.css
+[2m23:04:31[22m [34m[watch][39m src/layouts/Layout.astro
+[2m23:05:37[22m [34m[200][39m / [2m22ms[22m
+[2m23:06:43[22m [34m[watch][39m /src/layouts/Layout.astro?astro&type=style&index=0&lang.css
+[2m23:06:43[22m [34m[watch][39m src/layouts/Layout.astro
+[2m23:11:04[22m [34m[200][39m / [2m9ms[22m
+[2m23:11:11[22m [34m[watch][39m src/layouts/Layout.astro
+[2m23:11:12[22m [34m[200][39m / [2m16ms[22m
+[2m23:12:21[22m [34m[watch][39m /src/sections/gallery/1/index.astro?astro&type=style&index=0&lang.css
+[2m23:12:21[22m [34m[watch][39m /src/sections/gallery/1/index.astro?astro&type=style&index=0&lang.css
+[2m23:12:22[22m [34m[200][39m / [2m5ms[22m
+[2m23:12:33[22m [34m[watch][39m /src/sections/gallery/1/index.astro?astro&type=style&index=0&lang.css
+[2m23:12:33[22m [34m[watch][39m src/sections/gallery/1/index.astro
+[2m23:16:27[22m [34m[watch][39m /src/sections/gallery/1/index.astro?astro&type=style&index=0&lang.css
+[2m23:16:27[22m [34m[watch][39m /src/sections/gallery/1/index.astro?astro&type=style&index=0&lang.css
+[2m23:16:28[22m [34m[200][39m / [2m12ms[22m
+[2m23:19:31[22m [34m[watch][39m /src/sections/gallery/1/index.astro?astro&type=style&index=0&lang.css
+[2m23:19:31[22m [34m[watch][39m /src/sections/gallery/1/index.astro?astro&type=style&index=0&lang.css
+[2m23:19:32[22m [34m[200][39m / [2m7ms[22m
+[2m23:19:56[22m [34m[200][39m / [2m5ms[22m
+[2m23:22:35[22m [34m[watch][39m /src/sections/gallery/1/index.astro?astro&type=style&index=0&lang.css
+[2m23:22:35[22m [34m[watch][39m /src/sections/gallery/1/index.astro?astro&type=style&index=0&lang.css
+[2m23:22:36[22m [34m[200][39m / [2m4ms[22m
+[2m23:23:14[22m [34m[200][39m / [2m5ms[22m
+[2m23:25:02[22m [34m[watch][39m /src/sections/gallery/1/index.astro?astro&type=style&index=0&lang.css
+[2m23:25:03[22m [34m[200][39m / [2m4ms[22m
+[2m23:25:29[22m [34m[200][39m / [2m4ms[22m
+[2m23:28:13[22m [34m[watch][39m /src/sections/hero/1/index.astro?astro&type=style&index=0&lang.css
+[2m23:28:13[22m [34m[watch][39m src/sections/hero/1/index.astro
+[2m23:30:17[22m [34m[watch][39m /src/sections/hero/1/index.astro?astro&type=style&index=0&lang.css
+[2m23:30:17[22m [34m[watch][39m src/sections/hero/1/index.astro
+[2m23:33:45[22m [34m[watch][39m /src/sections/gallery/1/index.astro?astro&type=style&index=0&lang.css
+[2m23:33:45[22m [34m[watch][39m /src/sections/gallery/1/index.astro?astro&type=style&index=0&lang.css
+[2m23:33:46[22m [34m[200][39m / [2m11ms[22m
+[2m23:38:21[22m [34m[watch][39m /src/sections/gallery/1/index.astro?astro&type=style&index=0&lang.css
+[2m23:38:21[22m [34m[watch][39m /src/sections/gallery/1/index.astro?astro&type=style&index=0&lang.css
+[2m23:38:22[22m [34m[200][39m / [2m5ms[22m
+[2m24:01:58[22m [34m[watch][39m /src/sections/gallery/1/index.astro?astro&type=style&index=0&lang.css
+[2m24:01:58[22m [34m[200][39m / [2m10ms[22m
+[2m24:04:22[22m [34m[watch][39m /src/sections/gallery/1/index.astro?astro&type=style&index=0&lang.css
+[2m24:04:23[22m [34m[200][39m / [2m4ms[22m
+[2m24:04:36[22m [34m[watch][39m /src/sections/gallery/1/index.astro?astro&type=style&index=0&lang.css
+[2m24:04:36[22m [34m[watch][39m src/sections/gallery/1/index.astro
+[2m24:28:12[22m Configuration file updated. Restarting...
+[2m24:28:12[22m [34m[vite][39m Re-optimizing dependencies because lockfile has changed
+[2m24:28:12[22m [34m[content][39m Syncing content
+[2m24:28:12[22m [34m[content][39m Synced content
+[2m24:28:12[22m [34m[types][39m Generated [2m390ms[22m
+[2m24:28:13[22m [34m[vite][39m Re-optimizing dependencies because vite config has changed
+[2m24:29:02[22m Configuration file updated. Restarting...
+[2m24:29:02[22m [34m[vite][39m Re-optimizing dependencies because vite config has changed
+[2m24:29:02[22m [34m[content][39m Syncing content
+[2m24:29:02[22m [34m[content][39m Synced content
+[2m24:29:02[22m [34m[types][39m Generated [2m408ms[22m
+[2m24:29:02[22m [34m[vite][39m Re-optimizing dependencies because vite config has changed
+[2m24:30:28[22m Configuration file updated. Restarting...
+[2m24:30:28[22m [34m[vite][39m Re-optimizing dependencies because vite config has changed
+[2m24:30:28[22m [34m[content][39m Syncing content
+[2m24:30:28[22m [34m[content][39m Synced content
+[2m24:30:28[22m [34m[types][39m Generated [2m349ms[22m
+[2m24:30:28[22m [34m[vite][39m Re-optimizing dependencies because vite config has changed
+[2m24:42:38[22m [34m[200][39m / [2m74ms[22m
+[2m24:42:38[22m [34m[200][39m / [2m75ms[22m
+[2m24:42:38[22m [34m[200][39m / [2m76ms[22m
+[2m24:42:38[22m [34m[200][39m / [2m9ms[22m
+[2m01:01:48[22m [34m[200][39m / [2m18ms[22m
+[2m01:02:04[22m [34m[200][39m / [2m9ms[22m

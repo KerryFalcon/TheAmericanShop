@@ -1,112 +1,132 @@
 <!--
-  CONTACT VARIANT 1 — Formulario de contacto
-  =============================================
-  Estilo: Fondo oscuro con formulario centrado y datos de contacto laterales.
-
-  ELEMENTOS A SUSTITUIR:
-  ┌──────────────────────────────────────────────────────────────┐
-  │ .eyebrow         → Texto corto de categoria/etiqueta         │
-  │ h2               → Titulo principal de la seccion             │
-  │ .intro           → Parrafo descriptivo de apoyo              │
-  │ .info-item h3    → Titulo de cada dato de contacto (x3)      │
-  │ .info-item p     → Detalle de cada dato de contacto (x3)     │
-  │ form labels      → Etiquetas de cada campo del formulario    │
-  │ form button      → Texto del boton de envio                  │
-  │ form action      → URL destino del formulario                │
-  └──────────────────────────────────────────────────────────────┘
+  CONTACT — Pop Urban × White Light
 -->
 
-<section class="contact-one">
+<section class="contact-one" id="contact">
+  <div class="checker-strip-top" aria-hidden="true"></div>
+  <div class="splash sc1" aria-hidden="true"></div>
+  <div class="splash sc2" aria-hidden="true"></div>
+
+  <div class="contact-header">
+    <span class="eyebrow">✦ Contáctanos</span>
+    <h2>¿Tienes alguna pregunta o pedido especial?</h2>
+    <p class="intro">
+      Escríbenos y te ayudamos a encontrar tus snacks favoritos. También hacemos pedidos especiales
+      si no encuentras lo que buscas.
+    </p>
+  </div>
+
   <div class="wrapper">
-    <div class="info">
-      <!-- EYEBROW: Etiqueta superior corta -->
-      <p class="eyebrow">Lorem Ipsum</p>
-
-      <!-- TITULO: Headline principal de la seccion -->
-      <h2>Consectetur adipiscing elit sed do eiusmod</h2>
-
-      <!-- INTRO: Parrafo de apoyo -->
-      <p class="intro">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt
-        ut labore et dolore magna aliqua.
-      </p>
-
-      <!-- DATOS DE CONTACTO: Bloques informativos -->
-      <div class="info-items">
-        <div class="info-item">
-          <!-- DATO 1: Titulo + detalle -->
-          <h3>Lorem Ipsum</h3>
-          <p>lorem@ipsum.com</p>
+    <div class="info-items">
+      <div class="info-item">
+        <div class="info-icon">📧</div>
+        <div>
+          <h3>Email</h3>
+          <p>hola@theamericanshop.mx</p>
         </div>
-        <div class="info-item">
-          <!-- DATO 2: Titulo + detalle -->
-          <h3>Dolor Sit</h3>
-          <p>+1 (234) 567-8900</p>
+      </div>
+      <div class="info-item">
+        <div class="info-icon">📱</div>
+        <div>
+          <h3>WhatsApp</h3>
+          <p>+52 (123) 456-7890</p>
         </div>
-        <div class="info-item">
-          <!-- DATO 3: Titulo + detalle -->
-          <h3>Amet Consectetur</h3>
-          <p>Lorem Ipsum 123, Dolor Sit, Amet 45678</p>
+      </div>
+      <div class="info-item">
+        <div class="info-icon">📍</div>
+        <div>
+          <h3>Ubicación</h3>
+          <p>Envíos a todo México</p>
         </div>
       </div>
     </div>
 
-    <!-- FORMULARIO: Cambiar action, campos y boton -->
     <form class="form" action="#" method="POST">
       <div class="field">
-        <label for="contact-name">Lorem Ipsum</label>
-        <input type="text" id="contact-name" name="name" placeholder="Dolor sit amet" />
+        <label for="contact-name">Tu Nombre</label>
+        <input type="text" id="contact-name" name="name" placeholder="¿Cómo te llamas?" />
       </div>
       <div class="field">
-        <label for="contact-email">Consectetur</label>
-        <input type="email" id="contact-email" name="email" placeholder="lorem@ipsum.com" />
+        <label for="contact-email">Tu Email</label>
+        <input type="email" id="contact-email" name="email" placeholder="tu@email.com" />
       </div>
       <div class="field">
-        <label for="contact-message">Adipiscing Elit</label>
-        <textarea id="contact-message" name="message" rows="4" placeholder="Sed do eiusmod tempor..."></textarea>
+        <label for="contact-message">¿Qué necesitas?</label>
+        <textarea id="contact-message" name="message" rows="4" placeholder="Cuéntanos qué productos buscas..."></textarea>
       </div>
-      <!-- BOTON: Texto del CTA de envio -->
-      <button type="submit">Lorem Ipsum</button>
+      <button type="submit">Enviar Mensaje →</button>
     </form>
   </div>
+
+  <div class="checker-strip-bottom" aria-hidden="true"></div>
 </section>
 
 <style>
   .contact-one {
-    padding: clamp(3rem, 6vw, 5rem);
-    background: linear-gradient(180deg, #111827 0%, #0a0a0f 100%);
-    color: #e2e8f0;
+    position: relative;
+    overflow: hidden;
+    padding: clamp(4rem, 7vw, 6rem) clamp(2rem, 6vw, 6rem);
+    padding-top: calc(clamp(4rem, 7vw, 6rem) + 32px);
+    padding-bottom: calc(clamp(4rem, 7vw, 6rem) + 32px);
+    color: var(--text-dark, #1a1a2e);
+    background:
+      radial-gradient(ellipse 50% 40% at 20% 20%, rgba(0,216,255,0.06), transparent 50%),
+      radial-gradient(ellipse 60% 50% at 85% 80%, rgba(255,47,179,0.06), transparent 50%),
+      linear-gradient(180deg, #fdf0f7 0%, #ffffff 40%, #f5f0ff 100%);
   }
 
-  .wrapper {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 2.5rem;
-    align-items: start;
-    max-width: 1100px;
-    margin: 0 auto;
+  .splash { position: absolute; border-radius: 50%; filter: blur(100px); pointer-events: none; z-index: 0; }
+  .sc1 { width: 350px; height: 350px; top: 5%; right: -3%; background: rgba(255,47,179,0.1); }
+  .sc2 { width: 280px; height: 280px; bottom: 5%; left: 5%; background: rgba(0,216,255,0.08); }
+
+  .contact-header {
+    text-align: center;
+    max-width: 650px;
+    margin: 0 auto 3rem;
+    position: relative;
+    z-index: 2;
   }
 
   .eyebrow {
-    margin: 0;
+    display: inline-block;
+    margin: 0 0 0.8rem;
     text-transform: uppercase;
-    letter-spacing: 0.14em;
-    font-size: 0.78rem;
-    font-weight: 700;
-    color: #5eead4;
+    letter-spacing: 0.25em;
+    font-size: 0.75rem;
+    font-weight: 800;
+    color: var(--neon-pink, #ff2fb3);
+    background: rgba(255,47,179,0.08);
+    padding: 0.35rem 1rem;
+    border-radius: 999px;
+    border: 1px solid rgba(255,47,179,0.2);
   }
 
   h2 {
     margin: 0.5rem 0;
-    font-size: clamp(1.8rem, 4vw, 2.8rem);
-    line-height: 1.1;
-    color: #f1f5f9;
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    line-height: 1.05;
+    color: var(--text-dark, #1a1a2e) !important;
+    text-shadow:
+      0 0 8px rgba(255,47,179,0.3),
+      0 0 20px rgba(255,47,179,0.15);
   }
 
   .intro {
-    margin: 0 0 1.5rem;
-    color: #94a3b8;
-    max-width: 50ch;
+    margin: 0;
+    color: #555;
+    line-height: 1.7;
+    font-size: 1.05rem;
+  }
+
+  .wrapper {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.2fr);
+    gap: 2.5rem;
+    align-items: start;
+    max-width: 1100px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
   }
 
   .info-items {
@@ -115,85 +135,145 @@
   }
 
   .info-item {
-    padding: 0.8rem;
-    border: 1px solid rgba(94, 234, 212, 0.18);
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 1.2rem;
+    border: 2px solid rgba(255,47,179,0.15);
+    border-radius: 18px;
+    background: #fff;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.04);
+    transition: border-color 0.3s, box-shadow 0.3s, transform 0.3s;
+  }
+  .info-item:hover {
+    border-color: var(--neon-pink, #ff2fb3);
+    box-shadow: 0 8px 30px rgba(255,47,179,0.1);
+    transform: translateY(-3px);
+  }
+
+  .info-icon {
+    font-size: 1.5rem;
+    flex-shrink: 0;
+    width: 44px; height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255,47,179,0.08);
     border-radius: 12px;
-    background: rgba(15, 23, 42, 0.5);
   }
 
   .info-item h3 {
     margin: 0;
     font-size: 0.9rem;
-    color: #5eead4;
+    font-weight: 800;
+    color: var(--neon-pink, #ff2fb3);
   }
 
   .info-item p {
-    margin: 0.2rem 0 0;
-    color: #94a3b8;
-    font-size: 0.92rem;
+    margin: 0.15rem 0 0;
+    color: #666;
+    font-size: 0.9rem;
   }
 
   .form {
     display: grid;
-    gap: 1rem;
-    background: rgba(15, 23, 42, 0.6);
-    border: 1px solid rgba(94, 234, 212, 0.15);
-    border-radius: 18px;
-    padding: 1.5rem;
+    gap: 1.1rem;
+    background: #fff;
+    border: 2px solid rgba(0,216,255,0.15);
+    border-radius: 24px;
+    padding: 2.2rem;
+    box-shadow: 0 8px 40px rgba(0,0,0,0.06);
+    transition: border-color 0.3s, box-shadow 0.3s;
+  }
+  .form:focus-within {
+    border-color: var(--neon-pink, #ff2fb3);
+    box-shadow: 0 8px 40px rgba(255,47,179,0.08);
   }
 
   .field {
     display: grid;
-    gap: 0.3rem;
+    gap: 0.4rem;
   }
 
   label {
     font-size: 0.85rem;
-    font-weight: 600;
-    color: #cbd5e1;
+    font-weight: 700;
+    color: #333;
+    letter-spacing: 0.02em;
   }
 
   input,
   textarea {
-    background: rgba(2, 6, 23, 0.6);
-    border: 1px solid rgba(94, 234, 212, 0.2);
-    border-radius: 10px;
-    padding: 0.7rem 0.9rem;
-    color: #f1f5f9;
+    width: 100%;
+    background: #f8f5ff;
+    border: 2px solid #e8e4f0;
+    border-radius: 14px;
+    padding: 0.8rem 1rem;
+    color: var(--text-dark, #1a1a2e);
     font-family: inherit;
     font-size: 0.95rem;
     outline: none;
-    transition: border-color 0.2s ease;
+    transition: border-color 0.3s, box-shadow 0.3s;
   }
 
   input:focus,
   textarea:focus {
-    border-color: #5eead4;
+    border-color: var(--neon-pink, #ff2fb3);
+    box-shadow: 0 0 14px rgba(255,47,179,0.15);
+    background: #fff;
   }
 
-  textarea {
-    resize: vertical;
-  }
+  textarea { resize: vertical; }
 
   button {
-    background: #5eead4;
-    color: #022c22;
+    background: linear-gradient(135deg, var(--neon-pink, #ff2fb3), #ff7ad6 50%, var(--neon-yellow, #f9f871));
+    color: #0b0b12;
     border: none;
     border-radius: 999px;
-    padding: 0.8rem 1.2rem;
-    font-weight: 700;
+    padding: 0.9rem 2rem;
+    min-height: 46px;
+    font-weight: 900;
     font-size: 1rem;
+    letter-spacing: 0.02em;
     cursor: pointer;
-    transition: transform 0.2s ease;
+    box-shadow: 0 4px 20px rgba(255,47,179,0.4), 0 0 40px rgba(249,248,113,0.15);
+    transition: transform 0.2s, box-shadow 0.3s;
   }
 
   button:hover {
-    transform: translateY(-2px);
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 0 6px 30px rgba(255,47,179,0.6), 0 0 60px rgba(249,248,113,0.25);
   }
 
   @media (max-width: 768px) {
+    .contact-one {
+      padding: clamp(3.25rem, 12vw, 4.8rem) 1rem;
+    }
+    .contact-header {
+      margin-bottom: 2rem;
+    }
     .wrapper {
       grid-template-columns: 1fr;
+      gap: 1.4rem;
+    }
+    .form {
+      padding: 1.4rem;
+      border-radius: 20px;
+    }
+  }
+
+  @media (max-width: 430px) {
+    .contact-one {
+      padding-inline: 0.85rem;
+    }
+    h2 {
+      font-size: clamp(1.9rem, 10vw, 2.6rem);
+    }
+    .info-item {
+      padding: 1rem;
+    }
+    button {
+      width: 100%;
     }
   }
 </style>

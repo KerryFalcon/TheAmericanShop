@@ -1,0 +1,159 @@
+<section class="location-one" id="location">
+  <div class="location-glow location-glow-pink" aria-hidden="true"></div>
+  <div class="location-glow location-glow-blue" aria-hidden="true"></div>
+
+  <div class="location-inner">
+    <div class="location-header">
+      <span class="eyebrow">✦ Ubicación</span>
+      <h2>Visítanos</h2>
+      <p class="intro">Encuentra The American Shop QRO y ven por tus dulces, snacks y productos favoritos.</p>
+    </div>
+
+    <div class="map-card">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d119513.40460207526!2d-100.4658508!3d20.5964729!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d35b9c1cf79471%3A0xa5f9d2c93fab99f5!2sThe%20American%20Shop%20QRO!5e0!3m2!1sen!2smx!4v1779523791382!5m2!1sen!2smx" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+  </div>
+</section>
+
+<style>
+  .location-one {
+    position: relative;
+    overflow: hidden;
+    padding: clamp(4rem, 7vw, 6rem) clamp(1.25rem, 6vw, 6rem);
+    color: #f0ece8;
+    background:
+      radial-gradient(ellipse 80% 60% at 30% 35%, rgba(255,47,179,0.12), transparent 56%),
+      radial-gradient(ellipse 58% 48% at 78% 70%, rgba(0,216,255,0.09), transparent 52%),
+      radial-gradient(ellipse 42% 36% at 18% 86%, rgba(249,248,113,0.05), transparent 52%),
+      linear-gradient(180deg, #181420 0%, #201828 48%, #1c1524 100%);
+  }
+
+  .location-glow {
+    position: absolute;
+    z-index: 0;
+    border-radius: 50%;
+    filter: blur(100px);
+    pointer-events: none;
+    opacity: 0.25;
+  }
+
+  .location-glow-pink {
+    width: 360px;
+    height: 360px;
+    top: 4%;
+    right: -4%;
+    background: rgba(255,47,179,0.18);
+  }
+
+  .location-glow-blue {
+    width: 300px;
+    height: 300px;
+    bottom: 6%;
+    left: 4%;
+    background: rgba(0,216,255,0.14);
+  }
+
+  .location-inner {
+    position: relative;
+    z-index: 2;
+    max-width: 1100px;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .location-header {
+    max-width: 700px;
+    margin: 0 auto 2.5rem;
+    text-align: center;
+  }
+
+  .eyebrow {
+    display: inline-block;
+    margin: 0 0 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.25em;
+    font-size: 0.75rem;
+    font-weight: 800;
+    color: var(--neon-pink, #ff2fb3);
+    background: transparent;
+    border: none;
+    text-shadow: 0 0 6px rgba(255,47,179,0.4);
+  }
+
+  h2 {
+    margin: 0.5rem 0;
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    line-height: 1.05;
+  }
+
+  .intro {
+    margin: 0;
+    color: rgba(240,236,232,0.6);
+    font-size: clamp(1rem, 2vw, 1.05rem);
+    line-height: 1.7;
+  }
+
+  .map-card {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    border: 1px solid rgba(240,236,232,0.1);
+    border-radius: 24px;
+    background: rgba(35,28,50,0.56);
+    box-shadow:
+      0 4px 24px rgba(0,0,0,0.36),
+      0 0 26px rgba(255,47,179,0.12),
+      0 0 36px rgba(0,216,255,0.06);
+    transition: border-color 0.3s, box-shadow 0.3s, transform 0.3s;
+  }
+
+  .map-card:hover {
+    border-color: rgba(255,47,179,0.3);
+    box-shadow:
+      0 8px 34px rgba(0,0,0,0.42),
+      0 0 28px rgba(255,47,179,0.18),
+      0 0 42px rgba(0,216,255,0.1);
+    transform: translateY(-2px);
+  }
+
+  .map-card iframe {
+    display: block;
+    width: 100%;
+    height: clamp(320px, 52vw, 450px);
+    border: 0;
+    border-radius: 20px;
+  }
+
+  @media (max-width: 620px) {
+    .location-one {
+      padding: clamp(3.25rem, 12vw, 4.8rem) 1rem;
+    }
+
+    .location-header {
+      margin-bottom: 1.6rem;
+    }
+
+    .map-card {
+      border-radius: 20px;
+    }
+
+    .map-card iframe {
+      height: 340px;
+      border-radius: 18px;
+    }
+  }
+
+  @media (max-width: 430px) {
+    .location-one {
+      padding-inline: 0.85rem;
+    }
+
+    h2 {
+      font-size: clamp(2rem, 12vw, 2.8rem);
+    }
+
+    .map-card iframe {
+      height: 300px;
+    }
+  }
+</style>

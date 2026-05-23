@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 200 200">
+  <!-- Black base with marble-like texture feel -->
+  <rect width="200" height="200" fill="#0c0c0c"/>
+  <!-- White tiles (top-left, bottom-right) with slight marble veining via opacity -->
+  <rect x="0" y="0" width="100" height="100" fill="#e8e4df" rx="1"/>
+  <rect x="100" y="100" width="100" height="100" fill="#e8e4df" rx="1"/>
+  <!-- Subtle dark veins on white tiles -->
+  <line x1="15" y1="0" x2="85" y2="100" stroke="#c5c0b8" stroke-width="0.8" opacity="0.5"/>
+  <line x1="50" y1="0" x2="30" y2="100" stroke="#d0cbc3" stroke-width="0.5" opacity="0.35"/>
+  <line x1="115" y1="100" x2="185" y2="200" stroke="#c5c0b8" stroke-width="0.8" opacity="0.5"/>
+  <line x1="150" y1="100" x2="130" y2="200" stroke="#d0cbc3" stroke-width="0.5" opacity="0.35"/>
+  <!-- Subtle light veins on black tiles -->
+  <line x1="115" y1="0" x2="185" y2="100" stroke="#1a1a1a" stroke-width="1" opacity="0.6"/>
+  <line x1="140" y1="0" x2="120" y2="100" stroke="#222" stroke-width="0.6" opacity="0.4"/>
+  <line x1="15" y1="100" x2="85" y2="200" stroke="#1a1a1a" stroke-width="1" opacity="0.6"/>
+  <line x1="40" y1="100" x2="20" y2="200" stroke="#222" stroke-width="0.6" opacity="0.4"/>
+  <!-- Tile gap lines (grout) -->
+  <line x1="100" y1="0" x2="100" y2="200" stroke="#2a2a2a" stroke-width="2"/>
+  <line x1="0" y1="100" x2="200" y2="100" stroke="#2a2a2a" stroke-width="2"/>
+</svg>

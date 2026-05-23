@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="200" height="100" viewBox="0 0 200 100">
+  <rect width="200" height="100" fill="#3a2520"/>
+  <!-- Mortar -->
+  <rect x="0" y="0" width="200" height="2" fill="#2a1a15" opacity="0.5"/>
+  <rect x="0" y="48" width="200" height="2" fill="#2a1a15" opacity="0.5"/>
+  <!-- Row 1 -->
+  <rect x="2" y="2" width="96" height="46" rx="1" fill="#5a3828"/>
+  <rect x="100" y="2" width="98" height="46" rx="1" fill="#553525"/>
+  <!-- Row 1 highlights -->
+  <rect x="4" y="4" width="92" height="18" rx="1" fill="#6b4432" opacity="0.3"/>
+  <rect x="102" y="4" width="94" height="18" rx="1" fill="#6b4432" opacity="0.25"/>
+  <!-- Row 2 (offset) -->
+  <rect x="2" y="50" width="46" height="48" rx="1" fill="#523224"/>
+  <rect x="50" y="50" width="98" height="48" rx="1" fill="#5a3828"/>
+  <rect x="150" y="50" width="48" height="48" rx="1" fill="#4e3022"/>
+  <!-- Row 2 highlights -->
+  <rect x="4" y="52" width="42" height="18" rx="1" fill="#6b4432" opacity="0.25"/>
+  <rect x="52" y="52" width="94" height="18" rx="1" fill="#6b4432" opacity="0.3"/>
+  <rect x="152" y="52" width="44" height="18" rx="1" fill="#6b4432" opacity="0.2"/>
+  <!-- Vertical mortar -->
+  <rect x="98" y="2" width="2" height="46" fill="#2a1a15" opacity="0.5"/>
+  <rect x="48" y="50" width="2" height="48" fill="#2a1a15" opacity="0.5"/>
+  <rect x="148" y="50" width="2" height="48" fill="#2a1a15" opacity="0.5"/>
+</svg>

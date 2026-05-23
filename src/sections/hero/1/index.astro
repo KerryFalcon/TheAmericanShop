@@ -1,153 +1,437 @@
 <!--
-  HERO VARIANT 1 — Editorial con metricas
-  =========================================
-  Estilo: Fondo oscuro con acento esmeralda, composicion editorial dramatica.
-
-  ELEMENTOS A SUSTITUIR:
-  ┌─────────────────────────────────────────────────────────┐
-  │ .kicker          → Texto corto de categoria/etiqueta    │
-  │ h1               → Titulo principal del hero            │
-  │ .lead            → Parrafo descriptivo de apoyo         │
-  │ .btn-primary     → Texto + href del CTA principal       │
-  │ .btn-ghost       → Texto + href del CTA secundario      │
-  │ .metrics strong  → Cifra/dato destacado (x3)            │
-  │ .metrics span    → Descripcion de cada metrica (x3)     │
-  │ .halo            → Decorativo, no requiere sustitucion  │
-  └─────────────────────────────────────────────────────────┘
+  HERO — Pop Urban Neon × White
 -->
 
-<section class="hero-one">
-  <div class="hero-inner">
-    <!-- KICKER: Etiqueta superior corta -->
-    <p class="kicker">Lorem Ipsum</p>
+<section class="hero-one" id="hero">
+  <div class="checker-strip-top" aria-hidden="true"></div>
 
-    <!-- TITULO: Headline principal del hero -->
-    <h1>Dolor sit amet consectetur adipiscing elit sed do eiusmod</h1>
+  <!-- Decorative -->
+  <div class="glow-ring" aria-hidden="true"></div>
+  <div class="blob b1" aria-hidden="true"></div>
+  <div class="blob b2" aria-hidden="true"></div>
+  <div class="blob b3" aria-hidden="true"></div>
+  <div class="confetti c1" aria-hidden="true"></div>
+  <div class="confetti c2" aria-hidden="true"></div>
+  <div class="confetti c3" aria-hidden="true"></div>
+  <img class="mascot mascot-ed" src="/ed-cutout.png" alt="Ed de The American Shop" />
+  <img class="mascot mascot-gio" src="/gio-cutout.png" alt="Gio de The American Shop" />
 
-    <!-- DESCRIPCION: Parrafo de apoyo bajo el titulo -->
-    <p class="lead">
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore
-      et dolore magna aliqua. Ut enim ad minim veniam quis nostrud.
-    </p>
-
-    <div class="actions">
-      <!-- CTA PRINCIPAL: Boton primario -->
-      <a href="#" class="btn btn-primary">Lorem Ipsum</a>
-      <!-- CTA SECUNDARIO: Boton ghost -->
-      <a href="#" class="btn btn-ghost">Dolor Sit</a>
+  <div class="hero-grid">
+    <div class="hero-text">
+      <span class="kicker">✦ Snacks Americanos ✦</span>
+      <h1>Tus snacks favoritos de USA directo a tus manos</h1>
+      <p class="lead">
+        Doritos, Cheetos, Sour Patch Kids, Mountain Dew, cereales importados y mucho más.
+        Todo lo que amas de las tiendas americanas, ahora aquí.
+      </p>
+      <div class="actions">
+        <a href="#" class="btn btn-primary">Ver Productos</a>
+        <a href="#" class="btn btn-ghost">Hacer Pedido →</a>
+      </div>
     </div>
 
-    <!-- METRICAS: 3 bloques de dato + descripcion -->
-    <ul class="metrics">
-      <li><strong>+120%</strong><span>Lorem ipsum dolor sit</span></li>
-      <li><strong>14 min</strong><span>Consectetur adipiscing</span></li>
-      <li><strong>24/7</strong><span>Sed do eiusmod tempor</span></li>
-    </ul>
+    <div class="hero-visual">
+      <div class="logo-ring" aria-hidden="true"></div>
+      <img class="logo-neon" src="/TheAmericanShopQro.jpg" alt="The American Shop QRO" />
+      <!-- Floating products -->
+      <div class="float-product fp1" aria-hidden="true"><img src="/doritos.webp" alt="" /></div>
+      <div class="float-product fp2" aria-hidden="true"><img src="/Mountain-Dew.webp" alt="" /></div>
+      <div class="float-product fp3" aria-hidden="true"><img src="/nerds_rainbow.webp" alt="" /></div>
+      <div class="float-product fp4" aria-hidden="true"><img src="/twix.webp" alt="" /></div>
+      <div class="float-product fp5" aria-hidden="true"><img src="/captaincrunch.png" alt="" /></div>
+      <div class="float-product fp6" aria-hidden="true"><img src="/brisk.png" alt="" /></div>
+      <div class="float-product fp7" aria-hidden="true"><img src="/butterfinger.png" alt="" /></div>
+      <div class="float-product fp8" aria-hidden="true"><img src="/Cheetos Crunchy Flamin' Hot_1.png" alt="" /></div>
+      <div class="float-product fp9" aria-hidden="true"><img src="/cheezeits.png" alt="" /></div>
+      <div class="float-product fp10" aria-hidden="true"><img src="/laysbbq.png" alt="" /></div>
+    </div>
   </div>
 
-  <div class="halo" aria-hidden="true"></div>
+  <ul class="metrics">
+    <li><strong>+500</strong><span>Productos importados</span></li>
+    <li><strong>24 hrs</strong><span>Envío express</span></li>
+    <li><strong>100%</strong><span>Originales de USA</span></li>
+  </ul>
+
+  <div class="checker-strip-bottom" aria-hidden="true"></div>
 </section>
 
 <style>
   .hero-one {
     position: relative;
     overflow: hidden;
-    padding: clamp(3rem, 7vw, 6rem);
-    color: #ecfff8;
-    background: radial-gradient(circle at 80% -20%, #5eead4 0%, transparent 45%),
-      linear-gradient(135deg, #052e2b 0%, #063c39 38%, #0f172a 100%);
+    padding: clamp(5rem, 10vw, 8rem) clamp(2rem, 6vw, 6rem);
+    padding-top: calc(clamp(5rem, 10vw, 8rem) + 32px);
+    padding-bottom: calc(clamp(3rem, 5vw, 4rem) + 32px);
+    color: #fff;
+    background:
+      linear-gradient(135deg, #1a0a2e 0%, #0d0b1e 30%, #12111a 60%, #1e1b2e 100%);
   }
 
-  .hero-inner {
-    max-width: 760px;
+  /* === Glow ring behind logo === */
+  .glow-ring {
+    position: absolute;
+    width: 500px; height: 500px;
+    right: 5%; top: 50%;
+    transform: translateY(-50%);
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(255,47,179,0.35) 0%, rgba(0,216,255,0.15) 40%, transparent 70%);
+    filter: blur(60px);
+    pointer-events: none;
+    z-index: 0;
+    animation: ring-breathe 5s ease-in-out infinite alternate;
+  }
+  @keyframes ring-breathe {
+    0% { transform: translateY(-50%) scale(1); opacity: 0.8; }
+    100% { transform: translateY(-50%) scale(1.15); opacity: 1; }
+  }
+
+  /* === Blobs === */
+  .blob { position: absolute; border-radius: 50%; filter: blur(80px); pointer-events: none; z-index: 0; }
+  .b1 { width: 350px; height: 350px; top: -8%; left: 10%; background: rgba(255,47,179,0.2); }
+  .b2 { width: 250px; height: 250px; bottom: 5%; left: 40%; background: rgba(0,216,255,0.18); }
+  .b3 { width: 180px; height: 180px; top: 20%; left: 55%; background: rgba(249,248,113,0.15); }
+
+  /* === Confetti dots === */
+  .confetti {
+    position: absolute; border-radius: 50%; pointer-events: none; z-index: 1;
+    animation: float 6s ease-in-out infinite alternate;
+  }
+  .c1 { width: 12px; height: 12px; top: 15%; left: 8%; background: var(--neon-pink, #ff2fb3); }
+  .c2 { width: 8px; height: 8px; top: 70%; left: 25%; background: var(--neon-yellow, #f9f871); animation-delay: -2s; }
+  .c3 { width: 10px; height: 10px; top: 30%; right: 15%; background: var(--electric-blue, #00d8ff); animation-delay: -4s; }
+  @keyframes float {
+    0% { transform: translateY(0) rotate(0deg); }
+    100% { transform: translateY(-20px) rotate(180deg); }
+  }
+
+  /* === Grid layout === */
+  .hero-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 3rem;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
     position: relative;
     z-index: 2;
   }
 
+  /* === Text side === */
+  .hero-text { position: relative; z-index: 2; }
+
   .kicker {
+    display: inline-block;
     text-transform: uppercase;
-    letter-spacing: 0.2em;
-    font-size: 0.78rem;
-    color: #7efdd8;
-    margin-bottom: 0.8rem;
+    letter-spacing: 0.3em;
+    font-size: 0.75rem;
+    font-weight: 800;
+    color: var(--neon-yellow, #f9f871);
+    background: rgba(249,248,113,0.1);
+    padding: 0.4rem 1rem;
+    border-radius: 999px;
+    border: 1px solid rgba(249,248,113,0.3);
+    margin-bottom: 1.2rem;
   }
 
   h1 {
-    font-size: clamp(2rem, 5vw, 4rem);
+    font-size: clamp(2.8rem, 6vw, 5rem);
     margin: 0;
-    line-height: 1.05;
+    line-height: 1.0;
+    color: #fff !important;
+    text-shadow:
+      0 0 10px rgba(255,47,179,0.8),
+      0 0 30px rgba(255,47,179,0.5),
+      0 0 60px rgba(255,47,179,0.3);
   }
 
   .lead {
-    margin-top: 1rem;
-    font-size: clamp(1rem, 2vw, 1.25rem);
-    color: #b4f9e5;
-    max-width: 62ch;
+    margin-top: 1.2rem;
+    font-size: clamp(1rem, 1.8vw, 1.15rem);
+    color: rgba(255,255,255,0.7);
+    max-width: 50ch;
+    line-height: 1.7;
   }
 
+  /* === Buttons === */
   .actions {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.8rem;
-    margin-top: 1.6rem;
+    display: flex; flex-wrap: wrap; gap: 1rem; margin-top: 2rem;
   }
 
   .btn {
     text-decoration: none;
-    padding: 0.8rem 1.2rem;
+    padding: 0.9rem 2rem;
     border-radius: 999px;
-    font-weight: 600;
-    transition: transform 0.2s ease;
+    font-weight: 800;
+    font-size: 0.95rem;
+    letter-spacing: 0.02em;
+    transition: transform 0.2s, box-shadow 0.3s, filter 0.3s;
   }
-
-  .btn:hover {
-    transform: translateY(-2px);
-  }
+  .btn:hover { transform: translateY(-3px) scale(1.02); }
 
   .btn-primary {
-    background: #6ff6cf;
-    color: #05312d;
+    background: linear-gradient(135deg, #ff2fb3, #ff7ad6 50%, #f9f871);
+    color: #0b0b12;
+    box-shadow: 0 4px 20px rgba(255,47,179,0.5), 0 0 40px rgba(249,248,113,0.2);
+  }
+  .btn-primary:hover {
+    box-shadow: 0 6px 30px rgba(255,47,179,0.7), 0 0 60px rgba(249,248,113,0.35);
   }
 
   .btn-ghost {
-    border: 1px solid #8fffe0;
-    color: #ccffee;
+    border: 2px solid rgba(255,255,255,0.4);
+    color: #fff;
+    background: rgba(255,255,255,0.06);
+    backdrop-filter: blur(8px);
+  }
+  .btn-ghost:hover {
+    border-color: var(--neon-pink, #ff2fb3);
+    background: rgba(255,47,179,0.1);
+    box-shadow: 0 0 20px rgba(255,47,179,0.2);
   }
 
+  /* === Logo visual === */
+  .hero-visual {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: clamp(440px, 48vw, 620px);
+    z-index: 2;
+  }
+
+  .logo-ring {
+    position: absolute;
+    width: 320px; height: 320px;
+    border-radius: 50%;
+    border: 3px solid rgba(255,47,179,0.3);
+    box-shadow:
+      0 0 30px rgba(255,47,179,0.2),
+      inset 0 0 30px rgba(255,47,179,0.1),
+      0 0 60px rgba(0,216,255,0.1);
+    animation: ring-spin 20s linear infinite;
+  }
+  @keyframes ring-spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+
+  .logo-neon {
+    width: clamp(180px, 28vw, 280px);
+    height: auto;
+    position: relative;
+    z-index: 4;
+    filter:
+      drop-shadow(0 0 16px rgba(255,47,179,0.9))
+      drop-shadow(0 0 40px rgba(255,47,179,0.5))
+      drop-shadow(0 0 80px rgba(0,216,255,0.3));
+    animation: logo-pulse 4s ease-in-out infinite alternate;
+  }
+  @keyframes logo-pulse {
+    0% { filter: drop-shadow(0 0 16px rgba(255,47,179,0.9)) drop-shadow(0 0 40px rgba(255,47,179,0.5)); }
+    100% { filter: drop-shadow(0 0 24px rgba(255,47,179,1)) drop-shadow(0 0 60px rgba(255,47,179,0.7)) drop-shadow(0 0 100px rgba(0,216,255,0.4)); }
+  }
+
+  .mascot {
+    position: absolute;
+    bottom: -6px;
+    height: clamp(340px, 32vw, 520px);
+    width: auto;
+    max-width: none;
+    z-index: 2;
+    object-fit: contain;
+    object-position: bottom center;
+    filter:
+      drop-shadow(0 0 10px rgba(0,216,255,0.28))
+      drop-shadow(0 12px 24px rgba(0,0,0,0.45));
+    transform-origin: bottom center;
+  }
+
+  .mascot-ed {
+    left: clamp(-96px, -1.8vw, -28px);
+    transform: rotate(-3deg);
+  }
+
+  .mascot-gio {
+    right: clamp(-108px, -2.2vw, -32px);
+    height: clamp(360px, 34vw, 560px);
+    transform: rotate(3deg);
+  }
+
+  /* === Metrics === */
   .metrics {
-    margin: 2rem 0 0;
+    margin: 3rem auto 0;
     padding: 0;
     list-style: none;
     display: grid;
-    gap: 0.9rem;
-    grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+    gap: 1rem;
+    grid-template-columns: repeat(3, 1fr);
+    max-width: 1200px;
+    position: relative;
+    z-index: 2;
   }
 
   .metrics li {
-    background: rgba(9, 42, 39, 0.55);
-    border: 1px solid rgba(129, 255, 220, 0.22);
-    border-radius: 14px;
-    padding: 0.9rem;
+    background: rgba(255,255,255,0.06);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255,255,255,0.15);
+    border-radius: 18px;
+    padding: 1.2rem 1.4rem;
+    text-align: center;
+    transition: border-color 0.3s, box-shadow 0.3s, transform 0.3s;
+  }
+  .metrics li:hover {
+    border-color: rgba(255,47,179,0.5);
+    box-shadow: 0 0 24px rgba(255,47,179,0.15);
+    transform: translateY(-2px);
   }
 
   .metrics strong {
     display: block;
-    font-size: 1.2rem;
+    font-family: var(--font-display, 'Bangers', cursive);
+    font-size: 1.8rem;
+    color: var(--neon-yellow, #f9f871);
+    text-shadow: 0 0 10px rgba(249,248,113,0.5);
   }
 
   .metrics span {
-    color: #befde9;
-    font-size: 0.92rem;
+    color: rgba(255,255,255,0.55);
+    font-size: 0.85rem;
   }
 
-  .halo {
-    position: absolute;
-    width: 360px;
-    height: 360px;
-    right: -80px;
-    top: -80px;
-    border-radius: 50%;
-    background: radial-gradient(circle, rgba(126, 253, 216, 0.55), rgba(126, 253, 216, 0));
-    filter: blur(8px);
+  @media (max-width: 768px) {
+    .hero-one {
+      padding: clamp(3.25rem, 12vw, 4.8rem) 1rem;
+    }
+    .hero-grid {
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+      text-align: center;
+    }
+    h1 {
+      font-size: clamp(2.2rem, 12vw, 3.4rem);
+    }
+    .lead {
+      font-size: 1rem;
+    }
+    .actions .btn {
+      min-height: 46px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .hero-visual {
+      margin-top: 1.25rem;
+      min-height: clamp(350px, 94vw, 470px);
+      width: min(100%, 410px);
+      margin-left: auto;
+      margin-right: auto;
+      isolation: isolate;
+    }
+    .logo-ring {
+      width: clamp(230px, 62vw, 300px);
+      height: clamp(230px, 62vw, 300px);
+    }
+    .logo-neon {
+      width: clamp(165px, 46vw, 220px);
+    }
+    .mascot {
+      bottom: -18px;
+      height: clamp(180px, 47vw, 252px);
+      z-index: 3;
+    }
+    .mascot-ed {
+      left: clamp(-48px, -8vw, -24px);
+      transform: rotate(-4deg);
+    }
+    .mascot-gio {
+      right: clamp(-50px, -8vw, -26px);
+      height: clamp(194px, 50vw, 270px);
+      transform: rotate(4deg);
+    }
+    .float-product img {
+      width: clamp(34px, 8.5vw, 46px) !important;
+    }
+    .metrics {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 0.55rem;
+      max-width: min(100%, 440px);
+      margin-top: 0.9rem;
+      z-index: 4;
+    }
+    .metrics li {
+      border-radius: 14px;
+      padding: 0.7rem 0.45rem;
+    }
+    .metrics strong {
+      font-size: 1.25rem;
+    }
+    .metrics span {
+      display: block;
+      font-size: 0.68rem;
+      line-height: 1.25;
+    }
+    .kicker { margin: 0 auto 1.2rem; }
+    .lead { margin: 1.2rem auto 0; }
+    .actions { justify-content: center; }
+  }
+
+  @media (max-width: 430px) {
+    .hero-one {
+      padding-inline: 0.85rem;
+    }
+    .hero-visual {
+      min-height: 312px;
+      width: 100%;
+    }
+    .logo-ring {
+      width: 210px;
+      height: 210px;
+    }
+    .logo-neon {
+      width: 158px;
+    }
+    .mascot {
+      bottom: -14px;
+      height: 156px;
+    }
+    .mascot-ed {
+      left: -28px;
+    }
+    .mascot-gio {
+      right: -30px;
+      height: 168px;
+    }
+    .float-product img {
+      width: 34px !important;
+    }
+    .metrics {
+      max-width: 300px;
+      grid-template-columns: 1fr;
+      gap: 0.45rem;
+      margin-top: 0.6rem;
+    }
+    .metrics li {
+      padding: 0.58rem 0.85rem;
+      display: grid;
+      grid-template-columns: auto 1fr;
+      align-items: center;
+      gap: 0.55rem;
+      text-align: left;
+    }
+    .metrics strong {
+      font-size: 1.15rem;
+    }
+    .metrics span {
+      font-size: 0.72rem;
+    }
+    .actions {
+      display: grid;
+      grid-template-columns: 1fr;
+    }
+    .actions .btn {
+      width: 100%;
+    }
   }
 </style>
