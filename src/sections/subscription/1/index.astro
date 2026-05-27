@@ -1,0 +1,522 @@
+<!--
+  SUBSCRIPTION — Pop Urban Neon Premium Plans
+-->
+
+<section class="subs-one" id="suscripcion">
+  <div class="subs-glow subs-glow-pink" aria-hidden="true"></div>
+  <div class="subs-glow subs-glow-blue" aria-hidden="true"></div>
+  <div class="subs-glow subs-glow-yellow" aria-hidden="true"></div>
+
+  <div class="subs-inner">
+    <div class="subs-header">
+      <span class="eyebrow">✦ The American Shop Premium</span>
+      <h2>Únete al club premium</h2>
+      <p class="intro">
+        Recibe beneficios exclusivos, descuentos especiales, acceso anticipado a productos
+        importados y promociones solo para miembros.
+      </p>
+    </div>
+
+    <div class="plans">
+      <article class="plan-card">
+        <header class="plan-head">
+          <span class="plan-name">Básico</span>
+          <p class="plan-desc">Ideal si apenas estás probando los snacks gringos.</p>
+          <div class="plan-price">
+            <strong>$99</strong>
+            <span>MXN / mes</span>
+          </div>
+        </header>
+        <ul class="plan-features">
+          <li><span class="plan-check" aria-hidden="true"></span>Descuentos especiales para miembros</li>
+          <li><span class="plan-check" aria-hidden="true"></span>Promociones mensuales</li>
+          <li><span class="plan-check" aria-hidden="true"></span>Acceso a novedades antes que nadie</li>
+          <li><span class="plan-check" aria-hidden="true"></span>Newsletter con drops semanales</li>
+        </ul>
+        <a href="#contact" class="plan-btn plan-btn-ghost">Elegir Básico</a>
+      </article>
+
+      <article class="plan-card plan-featured">
+        <span class="plan-halo" aria-hidden="true"></span>
+        <span class="plan-tag">★ Más popular</span>
+        <header class="plan-head">
+          <span class="plan-name">Premium</span>
+          <p class="plan-desc">Para los fans de USA que ya no pueden vivir sin sus snacks.</p>
+          <div class="plan-price">
+            <strong>$199</strong>
+            <span>MXN / mes</span>
+          </div>
+        </header>
+        <ul class="plan-features">
+          <li><span class="plan-check" aria-hidden="true"></span>Todo lo del plan Básico</li>
+          <li><span class="plan-check" aria-hidden="true"></span>Descuentos más altos cada semana</li>
+          <li><span class="plan-check" aria-hidden="true"></span>Acceso anticipado a productos importados</li>
+          <li><span class="plan-check" aria-hidden="true"></span>Promociones exclusivas para miembros</li>
+          <li><span class="plan-check" aria-hidden="true"></span>Atención prioritaria por WhatsApp</li>
+        </ul>
+        <a href="#contact" class="plan-btn plan-btn-primary">Unirme ahora</a>
+      </article>
+
+      <article class="plan-card">
+        <header class="plan-head">
+          <span class="plan-name">VIP</span>
+          <p class="plan-desc">La experiencia completa de The American Shop.</p>
+          <div class="plan-price">
+            <strong>$299</strong>
+            <span>MXN / mes</span>
+          </div>
+        </header>
+        <ul class="plan-features">
+          <li><span class="plan-check" aria-hidden="true"></span>Todo lo del plan Premium</li>
+          <li><span class="plan-check" aria-hidden="true"></span>Preventas y drops exclusivos</li>
+          <li><span class="plan-check" aria-hidden="true"></span>Productos sorpresa cada mes</li>
+          <li><span class="plan-check" aria-hidden="true"></span>Ofertas personalizadas a tus gustos</li>
+          <li><span class="plan-check" aria-hidden="true"></span>Pedidos y envíos prioritarios</li>
+        </ul>
+        <a href="#contact" class="plan-btn plan-btn-ghost">Elegir VIP</a>
+      </article>
+    </div>
+
+    <p class="subs-footnote">
+      Cancela cuando quieras. Sin contratos largos, sin letras chiquitas.
+    </p>
+  </div>
+</section>
+
+<style>
+  .subs-one {
+    position: relative;
+    overflow: hidden;
+    isolation: isolate;
+    padding: clamp(4rem, 7vw, 6rem) clamp(1.25rem, 6vw, 6rem);
+    color: #f0ece8;
+    background:
+      radial-gradient(ellipse 60% 50% at 50% 0%, rgba(255,47,179,0.12), transparent 55%),
+      radial-gradient(ellipse 50% 40% at 85% 100%, rgba(0,216,255,0.09), transparent 55%),
+      radial-gradient(ellipse 40% 32% at 12% 90%, rgba(249,248,113,0.05), transparent 55%),
+      linear-gradient(180deg, #161228 0%, #1c1524 22%, #181420 55%, #1c1524 82%, #161228 100%);
+  }
+
+  /* Capa 1: pinstripes diagonales (premium) */
+  .subs-one::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+    background-image:
+      repeating-linear-gradient(
+        45deg,
+        transparent 0,
+        transparent 38px,
+        rgba(249,248,113,0.04) 38px,
+        rgba(249,248,113,0.04) 39px,
+        transparent 39px,
+        transparent 78px,
+        rgba(255,47,179,0.035) 78px,
+        rgba(255,47,179,0.035) 79px
+      );
+    -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 12%, black 88%, transparent 100%);
+    mask-image: linear-gradient(to bottom, transparent 0%, black 12%, black 88%, transparent 100%);
+  }
+
+  /* Capa 2: sparkles galácticos con drift */
+  .subs-one::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+    background-image:
+      radial-gradient(circle at 14% 22%, rgba(249,248,113,0.85) 0, transparent 0.5px),
+      radial-gradient(circle at 58% 38%, rgba(255,47,179,0.8) 0, transparent 0.5px),
+      radial-gradient(circle at 84% 70%, rgba(0,216,255,0.85) 0, transparent 0.5px),
+      radial-gradient(circle at 36% 84%, rgba(255,255,255,0.7) 0, transparent 0.4px),
+      radial-gradient(circle at 72% 16%, rgba(255,255,255,0.55) 0, transparent 0.4px),
+      radial-gradient(circle at 22% 58%, rgba(249,248,113,0.7) 0, transparent 0.4px),
+      radial-gradient(circle at 92% 32%, rgba(255,47,179,0.55) 0, transparent 0.45px),
+      radial-gradient(circle at 8% 90%, rgba(0,216,255,0.65) 0, transparent 0.45px);
+    background-size: 260px 260px;
+    background-repeat: repeat;
+    animation: subs-sparkle-drift 105s linear infinite;
+    -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 14%, black 86%, transparent 100%);
+    mask-image: linear-gradient(to bottom, transparent 0%, black 14%, black 86%, transparent 100%);
+  }
+
+  @keyframes subs-sparkle-drift {
+    from { background-position: 0 0; }
+    to { background-position: 260px -260px; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .subs-one::after,
+    .subs-glow { animation: none; }
+  }
+
+  .subs-glow {
+    position: absolute;
+    z-index: 0;
+    border-radius: 50%;
+    filter: blur(110px);
+    pointer-events: none;
+    opacity: 0.28;
+    will-change: transform, opacity;
+    animation: subs-breath 4s ease-in-out infinite;
+  }
+  .subs-glow-pink { animation-duration: 3.5s; }
+  .subs-glow-blue { animation-duration: 4.5s; animation-delay: -1.5s; }
+  .subs-glow-yellow { animation-duration: 5.5s; animation-delay: -2.5s; }
+
+  @keyframes subs-breath {
+    0%, 100% { transform: scale(0.96); opacity: 0.2; }
+    50% { transform: scale(1.18); opacity: 0.55; }
+  }
+  .subs-glow-pink {
+    width: 480px; height: 480px;
+    top: 4%; right: -10%;
+    background: rgba(255,47,179,0.55);
+  }
+  .subs-glow-blue {
+    width: 420px; height: 420px;
+    bottom: 6%; left: -8%;
+    background: rgba(0,216,255,0.5);
+  }
+  .subs-glow-yellow {
+    width: 280px; height: 280px;
+    top: 40%; left: 40%;
+    background: rgba(249,248,113,0.32);
+  }
+
+  .subs-inner {
+    position: relative;
+    z-index: 2;
+    max-width: 1140px;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .subs-header {
+    max-width: 700px;
+    margin: 0 auto 3rem;
+    text-align: center;
+  }
+
+  .eyebrow {
+    display: inline-block;
+    margin: 0 0 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.25em;
+    font-size: 0.75rem;
+    font-weight: 800;
+    color: var(--neon-yellow, #f9f871);
+    background: rgba(249,248,113,0.08);
+    padding: 0.4rem 1rem;
+    border-radius: 999px;
+    border: 1px solid rgba(249,248,113,0.28);
+    text-shadow: 0 0 6px rgba(249,248,113,0.35);
+  }
+
+  h2 {
+    margin: 0.5rem 0;
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    line-height: 1.05;
+  }
+
+  .intro {
+    margin: 0.6rem auto 0;
+    color: rgba(240,236,232,0.65);
+    font-size: clamp(1rem, 2vw, 1.05rem);
+    line-height: 1.7;
+    max-width: 560px;
+  }
+
+  .plans {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1.5rem;
+    align-items: stretch;
+  }
+
+  .plan-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 1.4rem;
+    padding: 2rem 1.6rem 1.8rem;
+    background: rgba(255,255,255,0.05);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 24px;
+    box-shadow:
+      0 8px 30px rgba(0,0,0,0.36),
+      0 0 28px rgba(255,47,179,0.06);
+    transition: border-color 0.3s, box-shadow 0.3s, transform 0.3s;
+  }
+  .plan-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 12%;
+    right: 12%;
+    height: 2px;
+    border-radius: 999px;
+    background: linear-gradient(90deg, transparent, rgba(0,216,255,0.65), transparent);
+    box-shadow: 0 0 14px rgba(0,216,255,0.55);
+    opacity: 0.65;
+  }
+  .plan-featured::before {
+    background: linear-gradient(90deg, transparent, rgba(255,47,179,0.85), rgba(249,248,113,0.85), transparent);
+    box-shadow: 0 0 16px rgba(255,47,179,0.55);
+    opacity: 0.9;
+  }
+  .plan-card:hover {
+    border-color: rgba(255,47,179,0.35);
+    box-shadow:
+      0 12px 38px rgba(0,0,0,0.44),
+      0 0 32px rgba(255,47,179,0.18),
+      0 0 48px rgba(0,216,255,0.08);
+    transform: translateY(-3px);
+  }
+
+  .plan-featured {
+    border: 2px solid rgba(255,47,179,0.55);
+    background:
+      radial-gradient(ellipse 100% 70% at 50% 0%, rgba(255,47,179,0.12), transparent 70%),
+      rgba(255,47,179,0.06);
+    box-shadow:
+      0 18px 48px rgba(0,0,0,0.5),
+      0 0 44px rgba(255,47,179,0.3),
+      0 0 70px rgba(249,248,113,0.1),
+      inset 0 0 24px rgba(255,47,179,0.08);
+    transform: translateY(-10px) scale(1.02);
+  }
+  .plan-featured:hover {
+    transform: translateY(-14px) scale(1.025);
+  }
+  .plan-halo {
+    position: absolute;
+    inset: -28% -12% auto -12%;
+    height: 80%;
+    z-index: -1;
+    border-radius: 50%;
+    background: radial-gradient(ellipse 60% 50% at 50% 30%, rgba(255,47,179,0.4), transparent 65%);
+    filter: blur(36px);
+    opacity: 0.7;
+    pointer-events: none;
+  }
+
+  .plan-tag {
+    position: absolute;
+    top: -14px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 0.32rem 0.95rem;
+    font-size: 0.7rem;
+    font-weight: 900;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: #0b0b12;
+    background: linear-gradient(135deg, var(--neon-pink, #ff2fb3), #ff7ad6 55%, var(--neon-yellow, #f9f871));
+    border-radius: 999px;
+    box-shadow:
+      0 4px 18px rgba(255,47,179,0.45),
+      0 0 24px rgba(249,248,113,0.25);
+    white-space: nowrap;
+  }
+
+  .plan-head {
+    text-align: left;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+    padding-bottom: 1.2rem;
+  }
+
+  .plan-name {
+    display: inline-block;
+    font-family: var(--font-display, 'Bangers', cursive);
+    font-size: 1.35rem;
+    letter-spacing: 0.06em;
+    color: var(--neon-yellow, #f9f871);
+    text-shadow: 0 0 10px rgba(249,248,113,0.35);
+  }
+
+  .plan-desc {
+    margin: 0.4rem 0 1.1rem;
+    color: rgba(240,236,232,0.65);
+    font-size: 0.92rem;
+    line-height: 1.5;
+  }
+
+  .plan-price {
+    display: flex;
+    align-items: baseline;
+    gap: 0.45rem;
+  }
+  .plan-price strong {
+    font-family: var(--font-display, 'Bangers', cursive);
+    font-size: 2.6rem;
+    line-height: 1;
+    color: #fff;
+    text-shadow:
+      0 0 10px rgba(255,47,179,0.5),
+      0 0 24px rgba(255,47,179,0.25);
+  }
+  .plan-price span {
+    color: rgba(240,236,232,0.55);
+    font-size: 0.85rem;
+    font-weight: 600;
+  }
+
+  .plan-features {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    gap: 0.75rem;
+    flex: 1;
+  }
+  .plan-features li {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.7rem;
+    color: rgba(240,236,232,0.82);
+    font-size: 0.93rem;
+    line-height: 1.45;
+  }
+  .plan-check {
+    flex-shrink: 0;
+    width: 20px;
+    height: 20px;
+    margin-top: 0.05rem;
+    border-radius: 999px;
+    background: rgba(255,47,179,0.14);
+    border: 1px solid rgba(255,47,179,0.45);
+    box-shadow: 0 0 10px rgba(255,47,179,0.22);
+    position: relative;
+  }
+  .plan-check::after {
+    content: "";
+    position: absolute;
+    left: 6px;
+    top: 2px;
+    width: 5px;
+    height: 9px;
+    border-right: 2px solid var(--neon-pink, #ff2fb3);
+    border-bottom: 2px solid var(--neon-pink, #ff2fb3);
+    transform: rotate(45deg);
+  }
+  .plan-featured .plan-check {
+    background: rgba(249,248,113,0.16);
+    border-color: rgba(249,248,113,0.55);
+    box-shadow: 0 0 12px rgba(249,248,113,0.3);
+  }
+  .plan-featured .plan-check::after {
+    border-color: var(--neon-yellow, #f9f871);
+  }
+
+  .plan-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    text-align: center;
+    padding: 0.85rem 1.4rem;
+    min-height: 46px;
+    border-radius: 999px;
+    font-weight: 800;
+    font-size: 0.95rem;
+    letter-spacing: 0.02em;
+    transition: transform 0.2s, box-shadow 0.3s, border-color 0.3s, background 0.3s;
+  }
+
+  .plan-btn-primary {
+    color: #0b0b12;
+    background: linear-gradient(135deg, var(--neon-pink, #ff2fb3), #ff7ad6 50%, var(--neon-yellow, #f9f871));
+    box-shadow:
+      0 6px 22px rgba(255,47,179,0.45),
+      0 0 36px rgba(249,248,113,0.18);
+  }
+  .plan-btn-primary:hover {
+    transform: translateY(-3px) scale(1.02);
+    box-shadow:
+      0 8px 30px rgba(255,47,179,0.6),
+      0 0 50px rgba(249,248,113,0.28);
+  }
+
+  .plan-btn-ghost {
+    color: #fff;
+    background: rgba(255,255,255,0.05);
+    border: 1.5px solid rgba(255,255,255,0.22);
+    backdrop-filter: blur(8px);
+  }
+  .plan-btn-ghost:hover {
+    transform: translateY(-3px);
+    border-color: var(--neon-pink, #ff2fb3);
+    background: rgba(255,47,179,0.1);
+    box-shadow: 0 6px 24px rgba(255,47,179,0.22);
+  }
+
+  .subs-footnote {
+    margin: 2.2rem auto 0;
+    text-align: center;
+    color: rgba(240,236,232,0.5);
+    font-size: 0.85rem;
+    letter-spacing: 0.02em;
+  }
+
+  @media (max-width: 980px) {
+    .plans {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+    .plan-featured {
+      grid-column: span 2;
+      transform: translateY(-4px);
+    }
+    .plan-featured:hover {
+      transform: translateY(-7px);
+    }
+  }
+
+  @media (max-width: 640px) {
+    .subs-one {
+      padding: clamp(3.25rem, 12vw, 4.8rem) 1rem;
+    }
+    .subs-header {
+      margin-bottom: 2.2rem;
+    }
+    .plans {
+      grid-template-columns: 1fr;
+      gap: 1.1rem;
+    }
+    .plan-card {
+      padding: 1.6rem 1.3rem 1.5rem;
+    }
+    .plan-featured {
+      grid-column: auto;
+      transform: translateY(-2px) scale(1);
+    }
+    .plan-featured:hover {
+      transform: translateY(-5px) scale(1);
+    }
+    .plan-halo {
+      inset: -18% -10% auto -10%;
+      opacity: 0.55;
+    }
+    .plan-price strong {
+      font-size: 2.2rem;
+    }
+  }
+
+  @media (max-width: 430px) {
+    .subs-one {
+      padding-inline: 0.85rem;
+    }
+    h2 {
+      font-size: clamp(1.95rem, 11vw, 2.6rem);
+    }
+    .plan-tag {
+      font-size: 0.62rem;
+      padding: 0.28rem 0.7rem;
+    }
+  }
+</style>

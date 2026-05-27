@@ -1,3 +1,6 @@
+---
+import CartIsland from '../cart/CartIsland.jsx';
+---
 <!doctype html>
 <html lang="en">
 	<head>
@@ -32,6 +35,7 @@
 			<div class="nav-links">
 				<a href="#hero">Inicio</a>
 				<a href="#gallery">Productos</a>
+				<a href="#suscripcion">Premium</a>
 				<a href="#location">Visítanos</a>
 				<a href="#contact">Contacto</a>
 				<a href="#contact" class="nav-cta">Ordena Ahora</a>
@@ -41,6 +45,7 @@
 			</button>
 		</nav>
 		<slot />
+		<CartIsland client:only="react" />
 	</body>
 </html>
 
@@ -1328,8 +1333,10 @@
 		'.products-toolbar',
 		'.tas-product-card',
 		'.pricing-one .card',
+		'.subs-one .plan-card',
+		'.location-one .store-card',
 		'.location-one .map-card',
-		'.contact-one .info-item',
+		'.contact-one .info-card',
 		'.contact-one .form'
 	].join(',');
 
